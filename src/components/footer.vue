@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-4">
+  <footer class="py-4 ">
     <div class="container-xxl">
       <div class="row align-items-center">
         <div class="col-5">
@@ -25,7 +25,7 @@
       </div>
     </div>
   </footer>
-  <footer class="py-4">
+  <footer class="py-4 flex-wrap">
     <div class="container-xxl">
       <div class="row bottom-group">
         <div class="col-3">
@@ -128,7 +128,7 @@
           </p>
           <img
             class=""
-            src="/public/images/GetItOnGooglePlay_Badge_Web_color_English.png"
+            src="/images/GetItOnGooglePlay_Badge_Web_color_English.png"
             alt="google play badge"
             style="width: 119.67px; height: 40px; margin-right: 10px"
             s

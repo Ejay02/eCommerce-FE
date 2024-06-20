@@ -145,7 +145,7 @@
     <div class="container-xxl">
       <div class="row">
         <div class="col-7">
-          <p class="text-center mb-0 text-white">
+          <p class="mb-0 text-white">
             &copy; {{ new Date().getFullYear() }}, Powered by Unknown Heroes 🖤
           </p>
         </div>

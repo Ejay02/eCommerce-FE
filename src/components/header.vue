@@ -8,7 +8,7 @@
         <div class="col-6">
           <p class="text-end text-white mb-0">
             Hotline:
-            <a class="text-white" href="(555) 1234 5678">(555) 1234 5678</a>
+            <a class="text-white" href="(555) 1234 567890">+00 123 456 7890</a>
           </p>
         </div>
       </div>
@@ -40,8 +40,10 @@
             class="header-upper-links d-flex align-items-center justify-content-between"
           >
             <div>
-              <router-link class="d-flex align-items-center gap-10 text-white"
-                ><img src="/public/images/compare.svg" alt="compare" />
+              <router-link
+                to=""
+                class="d-flex align-items-center gap-10 text-white"
+                ><img src="/images/compare.svg" alt="compare" />
                 <p class="mb-0">
                   Compare <br />
                   Products
@@ -49,8 +51,10 @@
               </router-link>
             </div>
             <div>
-              <router-link class="d-flex align-items-center gap-10 text-white"
-                ><img src="/public/images/wishlist.svg" alt="wishlist" />
+              <router-link
+                to=""
+                class="d-flex align-items-center gap-10 text-white"
+                ><img src="/images/wishlist.svg" alt="wishlist" />
                 <p class="mb-0">
                   Favorite <br />
                   Wishlist
@@ -58,8 +62,10 @@
               </router-link>
             </div>
             <div>
-              <router-link class="d-flex align-items-center gap-10 text-white"
-                ><img src="/public/images/user.svg" alt="user" />
+              <router-link
+                to=""
+                class="d-flex align-items-center gap-10 text-white"
+                ><img src="/images/user.svg" alt="user" />
                 <p class="mb-0">
                   Login <br />
                   My Account
@@ -67,13 +73,65 @@
               </router-link>
             </div>
             <div>
-              <router-link class="d-flex align-items-center gap-10 text-white"
-                ><img src="/public/images/cart.svg" alt="cart" />
+              <router-link
+                to=""
+                class="d-flex align-items-center gap-10 text-white"
+                ><img src="/images/cart.svg" alt="cart" />
                 <div class="d-flex flex-column gap-10">
                   <span class="badge bg-white text-dark">0</span>
                   <p class="mb-0">$0.00</p>
                 </div>
               </router-link>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </header>
+
+  <header class="header-bottom py-3">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="menu-bottom d-flex align-items-center gap-30">
+            <div class="">
+              <div class="dropdown">
+                <button
+                  class="btn btn-secondary dropdown-toggle bg-transparent border-0 gap-15 d-flex align-items-center"
+                  type="button"
+                  id="dropdownMenuButton1"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
+                  <img src="/images/menu.svg" alt="menu" />
+                  <span class="me-5 d-inline-block"> Shop categories </span>
+                </button>
+                <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
+                  <li>
+                    <router-link to="" class="dropdown-item text-white" href="#"
+                      >Action</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="" class="dropdown-item text-white" href="#"
+                      >Another action</router-link
+                    >
+                  </li>
+                  <li>
+                    <router-link to="" class="dropdown-item text-white" href="#"
+                      >Something else here</router-link
+                    >
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="menu-links">
+              <div class="d-flex align-items-center gap-15">
+                <router-link class="" to="/">Home</router-link>
+                <router-link class="" to="/store">Our Store</router-link>
+                <router-link class="" to="/blogs">Blogs</router-link>
+                <router-link class="" to="/contact">Contact</router-link>
+              </div>
             </div>
           </div>
         </div>

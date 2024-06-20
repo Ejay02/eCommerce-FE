@@ -4,6 +4,7 @@ import Home from "./pages/home.vue";
 import About from "./pages/about.vue";
 import Contact from "./pages/contact.vue";
 import Layout from "./components/layout.vue";
+import NotFound from "./components/error/notFound.vue";
 
 const routes = [
   {
@@ -23,6 +24,12 @@ const routes = [
         component: Contact,
       },
     ],
+  },
+  {
+    // path: "*",
+    path: "/:catchAll(.*)",
+    name: "NotFound",
+    component: NotFound,
   },
 ];
 

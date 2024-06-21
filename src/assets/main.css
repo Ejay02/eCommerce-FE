@@ -406,26 +406,35 @@ footer .input-group-text {
 /*======================
   Product Card
 =======================*/
-/* .product-card {
-  padding: 15px;
-  background-color: white;
-  border-radius: 10px;
-} */
+
+.products-container {
+  display: flex;
+  flex-wrap: nowrap;
+  padding: 5px;
+  width: 100%;
+}
+
+.col-2 {
+  flex: 0 0 16.666667%; /* This ensures each column takes up exactly 1/6 of the container width */
+  max-width: 16.666667%;
+}
 
 .product-card {
-  padding: 10px;
+  padding: 15px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  justify-content: center;
-  align-items: center;
   height: 100%; /* Ensures the card takes up the full height of the container */
+  overflow: hidden;
+}
+
+.product-card:hover .action-bar {
+  right: 15px;
 }
 
 .product-details {
   margin-top: 15px; /* Add some space between image and details */
-  text-align: center; /* Center align the details */
 }
 
 .product-image {
@@ -444,7 +453,7 @@ footer .input-group-text {
   cursor: pointer;
 }
 .product-image:hover img {
-  transform: scale(1.1); /* Scale down the image on hover */
+  transform: scale(0.7); /* Scale down the image on hover */
 }
 
 .product-card .product-details h6 {
@@ -460,6 +469,17 @@ footer .input-group-text {
 .product-card .product-details p.price {
   font-size: 16px;
   color: var(--color-1c1c1b);
+}
+
+.action-bar {
+  top: 10%;
+  right: -23px;
+  transition: 0.3s;
+}
+
+.wishlist-icon {
+  top: 2%;
+  right: 15px;
 }
 
 /*======================

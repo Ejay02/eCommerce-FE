@@ -17,8 +17,8 @@
               aria-label="ej@example.com"
               aria-describedby="basic-addon2"
             />
-            <span class="input-group-text p-2" id="basic-addon2"
-              >Subscribe</span
+            <button class="input-group-text p-2" id="basic-addon2"
+              >Subscribe</button
             >
           </div>
         </div>
@@ -94,7 +94,7 @@
             >
             <router-link to="" class="text-white py-2 mb-1">FAQs</router-link>
             <router-link to="" class="text-white py-2 mb-1"
-              >contact</router-link
+              >Contact</router-link
             >
             <router-link to="" class="text-white py-2 mb-1"
               >Size Chart</router-link

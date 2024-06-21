@@ -1142,7 +1142,21 @@ vue-router@4:
   dependencies:
     "@vue/devtools-api" "^6.5.1"
 
-vue@^3.4.29:
+vue-star-rating@^2.1.0:
+  version "2.1.0"
+  resolved "https://registry.yarnpkg.com/vue-star-rating/-/vue-star-rating-2.1.0.tgz#303df0231b5d04d271977c44a0967d4768b44e75"
+  integrity sha512-LnhuQPi4hkRg7egKls+iqtL1U0RTN2gQkdLsJN7acyynMsSc9epHLzk8McJS+bR0OzfG98zNFq7mxAyuSb/okQ==
+  dependencies:
+    vue "^3.0.0"
+
+vue3-marquee-slider@^1.0.5:
+  version "1.0.5"
+  resolved "https://registry.yarnpkg.com/vue3-marquee-slider/-/vue3-marquee-slider-1.0.5.tgz#bccba9db644831b212541d249ec7080129d8ee88"
+  integrity sha512-92nrvGrmTC9Ltqz6QRXdkuJ5Tj6gM+69xy8sEB2kq/xY8RI/FTQxDF6QiCyJdieJDNL67giKlhJVDL0D9i9SxQ==
+  dependencies:
+    vue "^3.2.45"
+
+vue@^3.0.0, vue@^3.2.45, vue@^3.4.29:
   version "3.4.29"
   resolved "https://registry.yarnpkg.com/vue/-/vue-3.4.29.tgz#fad5a0fe6dfa5c4a2cfbbc48c489e7989616a15b"
   integrity sha512-8QUYfRcYzNlYuzKPfge1UWC6nF9ym0lx7mpGVPJYNhddxEf3DD0+kU07NTL0sXuiT2HuJuKr/iEO8WvXvT0RSQ==

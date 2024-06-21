@@ -12,7 +12,7 @@
 
             <div class="main-banner-content position-absolute">
               <h4>SUPERCHARGED FOR PROS</h4>
-              <h5>iPad S13+ Pro.</h5>
+              <h5>iPad S15+ Pro.</h5>
               <p>From $999.00 or $41.62/mo.</p>
               <router-link to="" class="button">BUY NOW</router-link>
             </div>
@@ -32,7 +32,7 @@
 
               <div class="small-banner-content position-absolute">
                 <h4>Best sale</h4>
-                <h5>Laptops Max</h5>
+                <h5>MacBook Pro 14</h5>
                 <p>
                   From $1699.00 or <br />
                   $64.62/mo.
@@ -237,8 +237,57 @@
       </div>
     </div>
   </section>
+
+  <section class="marquee-wrapper py-5">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="marquee-inner-wrapper card-wrapper">
+            <vue-marquee-slider :speed="15000" reverse>
+              <div class="mx-4 w-25"></div>
+              <img src="/images/brand-01.png" alt="apple logo" />
+              <img src="/images/brand-02.png" alt="bose logo" />
+              <img src="/images/brand-03.png" alt="canon logo" />
+              <img src="/images/brand-04.png" alt="dell logo" />
+              <img src="/images/brand-05.png" alt="intel logo" />
+              <img src="/images/brand-06.png" alt="lg logo" />
+              <img src="/images/brand-07.png" alt="samsung logo" />
+              <img src="/images/brand-08.png" alt="scan disk logo" />
+            </vue-marquee-slider>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-heading">Featured Collection</h3>
+        </div>
+        <ProductCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="blog-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-heading">Our Latest Blogs</h3>
+        </div>
+        <blogCard />
+      </div>
+    </div>
+  </section>
 </template>
 
-<script setup></script>
+<script setup>
+import { VueMarqueeSlider } from "vue3-marquee-slider";
+import "../../node_modules/vue3-marquee-slider/dist/style.css";
+import blogCard from "../components/cards/blogCard.vue";
+import ProductCard from "@/components/cards/productCard.vue";
+</script>
 
 <style lang="scss" scoped></style>

@@ -12,7 +12,7 @@
 
             <div class="main-banner-content position-absolute">
               <h4>SUPERCHARGED FOR PROS</h4>
-              <h5>iPad S15+ Pro.</h5>
+              <h5>iPhone 15 Pro</h5>
               <p>From $999.00 or $41.62/mo.</p>
               <router-link to="" class="button">BUY NOW</router-link>
             </div>

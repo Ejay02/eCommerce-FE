@@ -1,32 +1,34 @@
 <template>
   <div class="row products-container">
     <div class="col-2" v-for="(product, index) in products" :key="index">
-      <div class="product-card position-relative">
-        <div class="wishlist-icon position-absolute">
-          <router-link>
-            <img src="/images/wish.svg" alt="wishlist" />
-          </router-link>
+      <router-link to="">
+        <div class="product-card position-relative">
+          <div class="wishlist-icon position-absolute">
+            <router-link>
+              <img src="/images/wish.svg" alt="wishlist" />
+            </router-link>
+          </div>
+          <div class="product-image">
+            <img
+              :src="product.image"
+              :alt="`product image of ${product.title}`"
+            />
+          </div>
+          <div class="product-details">
+            <h6 class="brand">{{ product.brand }}</h6>
+            <h5 class="product-title">{{ product.title }}</h5>
+            <star-rating
+              v-bind:star-size="20"
+              v-bind:increment="0.5"
+              :rating="product.rating"
+              :read-only="true"
+              :show-rating="false"
+            ></star-rating>
+            <p class="price">{{ product.price }}</p>
+          </div>
+          <ActionBar />
         </div>
-        <div class="product-image">
-          <img
-            :src="product.image"
-            :alt="`product image of ${product.title}`"
-          />
-        </div>
-        <div class="product-details">
-          <h6 class="brand">{{ product.brand }}</h6>
-          <h5 class="product-title">{{ product.title }}</h5>
-          <star-rating
-            v-bind:star-size="20"
-            v-bind:increment="0.5"
-            :rating="product.rating"
-            :read-only="true"
-            :show-rating="false"
-          ></star-rating>
-          <p class="price">{{ product.price }}</p>
-        </div>
-        <ActionBar />
-      </div>
+      </router-link>
     </div>
   </div>
 </template>

@@ -62,6 +62,10 @@ a {
   border-color: inherit;
 }
 
+.gap-5 {
+  gap: 5px;
+}
+
 .gap-10 {
   gap: 10px;
 }
@@ -405,7 +409,7 @@ footer .input-group-text {
 }
 
 /*======================
-  Product Card
+  Featured products
 =======================*/
 .products-container {
   flex-wrap: nowrap;
@@ -419,7 +423,9 @@ footer .input-group-text {
 
 /* time to stop undoing */
 
-.product-card {
+.product-card,
+.popular-card,
+.popular-card-2 {
   padding: 25px;
   background-color: white;
   border-radius: 10px;
@@ -487,6 +493,48 @@ footer .input-group-text {
 .wishlist-icon {
   top: 2%;
   right: 15px;
+}
+
+/*======================
+  Special products
+=======================*/
+/* card 1 */
+
+.popular-card .details h6 {
+  font-size: 10px;
+  color: var(--color-1c1c1b);
+}
+
+/* card 2 */
+.popular-card-2 {
+  background-color: var(--color-232f3e);
+  gap: 30px;
+}
+
+.popular-card-2 .details-2 h4 {
+  font-size: 10px;
+  color: white;
+}
+.popular-card-2 .details-2 h2 {
+  font-size: 15px;
+  color: white;
+}
+
+.popular-card-2 .image-container {
+  flex-grow: 1;
+  display: flex;
+
+  justify-content: center;
+}
+
+.popular-card-2 .homepod {
+  width: 200%;
+}
+
+.special-product-card {
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 /*======================

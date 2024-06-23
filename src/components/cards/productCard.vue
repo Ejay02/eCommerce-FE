@@ -1,10 +1,10 @@
 <template>
   <div class="row products-container">
-    <div class="col-2" v-for="(product, index) in products" :key="index">
+    <div class="col-2" v-for="(product, index) in limitedProducts" :key="index">
       <router-link to="">
         <div class="product-card position-relative">
           <div class="wishlist-icon position-absolute">
-            <router-link>
+            <router-link to="">
               <img src="/images/wish.svg" alt="wishlist" />
             </router-link>
           </div>
@@ -18,7 +18,7 @@
             <h6 class="brand">{{ product.brand }}</h6>
             <h5 class="product-title">{{ product.title }}</h5>
             <star-rating
-              v-bind:star-size="20"
+              v-bind:star-size="15"
               v-bind:increment="0.5"
               :rating="product.rating"
               :read-only="true"
@@ -26,7 +26,7 @@
             ></star-rating>
             <p class="price">{{ product.price }}</p>
           </div>
-          <ActionBar />
+          <actionBar />
         </div>
       </router-link>
     </div>
@@ -34,9 +34,16 @@
 </template>
 
 <script setup>
-import { ref } from "vue";
+import { ref, computed } from "vue";
 import StarRating from "vue-star-rating";
 import ActionBar from "../actionBar.vue";
+
+const props = defineProps({
+  limit: {
+    type: Number,
+    default: null,
+  },
+});
 
 const products = ref([
   {
@@ -82,4 +89,8 @@ const products = ref([
     price: "$209",
   },
 ]);
+
+const limitedProducts = computed(() => {
+  return props.limit ? products.value.slice(0, props.limit) : products.value;
+});
 </script>

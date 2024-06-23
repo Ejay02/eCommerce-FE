@@ -238,12 +238,104 @@
     </div>
   </section>
 
-  <section class="marquee-wrapper py-5">
+  <section class="featured-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-heading">Featured Collection</h3>
+        </div>
+        <ProductCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="special-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-heading">Special Products</h3>
+        </div>
+      </div>
+      <div class="row">
+        <SpecialProductCard />
+        <SpecialProductCard />
+        <SpecialProductCard />
+      </div>
+    </div>
+  </section>
+
+  <section class="popular-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <h3 class="section-heading">Our Popular Products</h3>
+        </div>
+      </div>
+      <div class="row products-container">
+        <!-- card 1 -->
+        <div class="col-2">
+          <div class="card">
+            <div class="popular-card d-flex gap-15">
+              <div class="details d-flex gap-15 align-items-center">
+                <img
+                  src="/images/prod-6.jpg"
+                  alt="watch"
+                  style="width: 40px; height: 40px"
+                />
+                <h6>Smart Watch</h6>
+              </div>
+              <div class="details d-flex gap-15 align-items-center">
+                <img
+                  src="/images/speaker.jpg"
+                  alt="speaker"
+                  style="width: 40px; height: 40px"
+                />
+                <h6>Speaker</h6>
+              </div>
+              <div class="details d-flex gap-15 align-items-center">
+                <img
+                  src="/images/laptop.jpg"
+                  alt="laptop"
+                  style="width: 40px; height: 40px"
+                />
+                <h6>Laptops</h6>
+              </div>
+            </div>
+          </div>
+        </div>
+        <!-- card 2 -->
+        <div class="col-2">
+          <div class="card">
+            <div class="popular-card-2 d-flex gap-15">
+              <div class="details-2 d-flex gap-15 align-items-center">
+                <h4 class="">15% OFF</h4>
+              </div>
+              <div class="details-2 d-flex gap-15 align-items-center">
+                <h2>Home Speakers</h2>
+              </div>
+              <div class="details-2 d-flex gap-15 align-items-center">
+                <h4>
+                  From $99.99 or $1.66/mo. <br />
+                  for 24 mo. *
+                </h4>
+              </div>
+              <div class="image-container">
+                <img src="/images/homepod.png" alt="homePod" class="homepod" />
+              </div>
+            </div>
+          </div>
+        </div>
+        <ProductCard :limit="4" />
+      </div>
+    </div>
+  </section>
+
+  <section class="marquee-wrapper home-wrapper-2 py-5">
     <div class="container-xxl">
       <div class="row">
         <div class="col-12">
           <div class="marquee-inner-wrapper card-wrapper">
-            <vue-marquee-slider :speed="15000" reverse>
+            <vue-marquee-slider :speed="15000" reverse id="marquee-slider">
               <div class="mx-4 w-25"></div>
               <img src="/images/brand-01.png" alt="apple logo" />
               <img src="/images/brand-02.png" alt="bose logo" />
@@ -256,17 +348,6 @@
             </vue-marquee-slider>
           </div>
         </div>
-      </div>
-    </div>
-  </section>
-
-  <section class="blog-wrapper py-5 home-wrapper-2">
-    <div class="container-xxl">
-      <div class="row">
-        <div class="col-12">
-          <h3 class="section-heading">Featured Collection</h3>
-        </div>
-        <ProductCard />
       </div>
     </div>
   </section>
@@ -288,6 +369,7 @@ import { VueMarqueeSlider } from "vue3-marquee-slider";
 import "../../node_modules/vue3-marquee-slider/dist/style.css";
 import blogCard from "../components/cards/blogCard.vue";
 import ProductCard from "@/components/cards/productCard.vue";
+import SpecialProductCard from "../components/cards/specialProductCard.vue";
 </script>
 
 <style lang="scss" scoped></style>

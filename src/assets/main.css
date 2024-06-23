@@ -35,7 +35,7 @@ body {
 .section-heading {
   font-size: 26px;
   line-height: 32px;
-  font-weight: 500;
+  font-weight: 500px;
   margin-bottom: 30px;
 }
 
@@ -124,7 +124,7 @@ a {
   color: white;
   font-size: 14px;
   line-height: 18px;
-  font-weight: 400;
+  font-weight: 400px;
   letter-spacing: 0.3;
   text-transform: uppercase;
 }
@@ -193,7 +193,7 @@ footer .input-group-text {
 
 .main-banner-content h4 {
   font-size: 16px;
-  font-weight: 400;
+  font-weight: 400px;
   line-height: 24px;
   color: var(--color-bf4800);
   margin: 0 0 12px;
@@ -205,7 +205,7 @@ footer .input-group-text {
   font-size: 42px;
   line-height: 64px;
   letter-spacing: -2px;
-  font-weight: 500;
+  font-weight: 500px;
   /* padding: 0; */
   text-transform: none;
 }
@@ -224,7 +224,7 @@ footer .input-group-text {
 
 .small-banner-content h4 {
   font-size: 14px;
-  font-weight: 400;
+  font-weight: 400px;
   line-height: 24px;
   color: var(--color-bf4800);
   margin: 0 0 12px;
@@ -236,7 +236,7 @@ footer .input-group-text {
   font-size: 22px;
   line-height: 34px;
   letter-spacing: -2px;
-  font-weight: 500;
+  font-weight: 500px;
   /* padding: 0; */
   text-transform: none;
 }
@@ -392,7 +392,7 @@ footer .input-group-text {
   line-height: 24px;
   text-transform: uppercase;
   letter-spacing: 0;
-  font-weight: 400;
+  font-weight: 400px;
   color: var(--color-777777);
   padding: 0;
 }
@@ -440,8 +440,7 @@ footer .input-group-text {
 }
 
 .product-details {
-  margin-top: 15px; /* Add some space between image and details */
-
+  margin-top: 45px; /* Add some space between image and details */
   flex-grow: 1; /* This allows the details to take up the remaining space */
   display: flex;
   flex-direction: column;
@@ -482,6 +481,7 @@ footer .input-group-text {
 .product-card .product-details p.price {
   font-size: 16px;
   color: var(--color-1c1c1b);
+  margin-top: 5px;
 }
 
 .action-bar {
@@ -498,8 +498,29 @@ footer .input-group-text {
 /*======================
   Special products
 =======================*/
-/* card 1 */
+.special-product-content {
+  width: 50%;
+}
 
+.special-product-card {
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: white;
+}
+
+.special-product-content .discount-countdown {
+  font-size: 14px;
+}
+
+.discount-countdown .badge {
+  font-size: 10px;
+  padding: 10px;
+}
+
+/*======================
+  popular card ======
+=======================*/
+/* card 1 */
 .popular-card .details h6 {
   font-size: 10px;
   color: var(--color-1c1c1b);
@@ -511,10 +532,15 @@ footer .input-group-text {
   gap: 30px;
 }
 
+.popular-card-2 .homePod {
+  width: 400%;
+}
+
 .popular-card-2 .details-2 h4 {
   font-size: 10px;
   color: white;
 }
+
 .popular-card-2 .details-2 h2 {
   font-size: 15px;
   color: white;
@@ -523,18 +549,93 @@ footer .input-group-text {
 .popular-card-2 .image-container {
   flex-grow: 1;
   display: flex;
-
   justify-content: center;
+  width: 50%;
 }
 
-.popular-card-2 .homepod {
-  width: 200%;
-}
-
-.special-product-card {
-  padding: 20px 10px;
+/*======================
+  famous card ======
+=======================*/
+.famous-card {
+  padding: 25px;
+  background-color: black;
   border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Ensures the card takes up the full height of the container */
+  overflow: hidden;
+  width: 100%;
+}
+
+.famous-card-2 {
+  padding: 25px;
   background-color: white;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  height: 400px; /* Ensures the card takes up the full height of the container */
+  overflow: hidden;
+}
+
+.famous-card .famous-content {
+  top: 10%;
+  left: 10%;
+}
+
+.famous-card .image-container img {
+  justify-content: center;
+  align-items: center;
+  width: 300px;
+  height: 200px;
+}
+
+.famous-content h5 {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400px;
+  color: white;
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.famous-content h6 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400px;
+  color: white;
+  margin-bottom: 20px;
+}
+
+.famous-content p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100px;
+  color: white;
+  /* margin: 0;  */
+}
+
+.famous-content-1 h5 {
+  font-size: 13px;
+  line-height: 20px;
+  font-weight: 400px;
+  color: var(--color-777777);
+  margin-bottom: 20px;
+  text-transform: uppercase;
+}
+
+.famous-content-1 h6 {
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 400px;
+  margin-bottom: 20px;
+  color: black;
+}
+
+.famous-content-1 p {
+  font-size: 16px;
+  line-height: 24px;
+  font-weight: 100px;
+  color: var(--color-777777);
 }
 
 /*======================

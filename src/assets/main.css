@@ -62,6 +62,10 @@ a {
   border-color: inherit;
 }
 
+.gap-5 {
+  gap: 5px;
+}
+
 .gap-10 {
   gap: 10px;
 }
@@ -313,6 +317,7 @@ footer .input-group-text {
   /* background-color: white; */
   /* box-shadow: 0 0 10px #0000001a; */
   padding: 45px;
+  background-color: var(--color-f5f5f7);
 }
 
 /*======================
@@ -404,13 +409,10 @@ footer .input-group-text {
 }
 
 /*======================
-  Product Card
+  Featured products
 =======================*/
-
 .products-container {
-  display: flex;
   flex-wrap: nowrap;
-  padding: 5px;
   width: 100%;
 }
 
@@ -419,13 +421,17 @@ footer .input-group-text {
   max-width: 16.666667%;
 }
 
-.product-card {
-  padding: 15px;
+/* time to stop undoing */
+
+.product-card,
+.popular-card,
+.popular-card-2 {
+  padding: 25px;
   background-color: white;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
-  height: 100%; /* Ensures the card takes up the full height of the container */
+  height: 400px; /* Ensures the card takes up the full height of the container */
   overflow: hidden;
 }
 
@@ -435,6 +441,12 @@ footer .input-group-text {
 
 .product-details {
   margin-top: 15px; /* Add some space between image and details */
+
+  flex-grow: 1; /* This allows the details to take up the remaining space */
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden; /* Hide any overflow */
 }
 
 .product-image {
@@ -442,7 +454,7 @@ footer .input-group-text {
   justify-content: center;
   align-items: center;
   width: 100%; /* Ensure the image container takes full width */
-  height: 100%; /* Ensure the image container takes full height */
+  height: 200px; /* Ensure the image container takes full height */
 }
 
 .product-image img {
@@ -452,6 +464,7 @@ footer .input-group-text {
   transition: transform 0.5s ease;
   cursor: pointer;
 }
+
 .product-image:hover img {
   transform: scale(0.7); /* Scale down the image on hover */
 }
@@ -480,6 +493,48 @@ footer .input-group-text {
 .wishlist-icon {
   top: 2%;
   right: 15px;
+}
+
+/*======================
+  Special products
+=======================*/
+/* card 1 */
+
+.popular-card .details h6 {
+  font-size: 10px;
+  color: var(--color-1c1c1b);
+}
+
+/* card 2 */
+.popular-card-2 {
+  background-color: var(--color-232f3e);
+  gap: 30px;
+}
+
+.popular-card-2 .details-2 h4 {
+  font-size: 10px;
+  color: white;
+}
+.popular-card-2 .details-2 h2 {
+  font-size: 15px;
+  color: white;
+}
+
+.popular-card-2 .image-container {
+  flex-grow: 1;
+  display: flex;
+
+  justify-content: center;
+}
+
+.popular-card-2 .homepod {
+  width: 200%;
+}
+
+.special-product-card {
+  padding: 20px 10px;
+  border-radius: 10px;
+  background-color: white;
 }
 
 /*======================

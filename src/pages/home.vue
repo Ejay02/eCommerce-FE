@@ -1,4 +1,5 @@
 <template>
+  <!-- main banner -->
   <section class="home-wrapper-1 py-5">
     <div class="container-xxl">
       <div class="row">
@@ -93,6 +94,7 @@
     </div>
   </section>
 
+  <!-- services -->
   <section class="home-wrapper-2 py-5">
     <div class="container-xxl">
       <div class="row">
@@ -145,6 +147,7 @@
     </div>
   </section>
 
+  <!-- categories -->
   <section class="home-wrapper-2 py-5">
     <div class="container-xxl">
       <div class="row">
@@ -238,6 +241,7 @@
     </div>
   </section>
 
+  <!-- featured collection -->
   <section class="featured-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="row">
@@ -249,6 +253,16 @@
     </div>
   </section>
 
+  <!--famous  -->
+  <section class="famous-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <FamousCard />
+      </div>
+    </div>
+  </section>
+
+  <!-- special products -->
   <section class="special-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="row">
@@ -264,6 +278,7 @@
     </div>
   </section>
 
+  <!-- popular products -->
   <section class="popular-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="row">
@@ -306,21 +321,21 @@
         <!-- card 2 -->
         <div class="col-2">
           <div class="card">
-            <div class="popular-card-2 d-flex gap-15">
-              <div class="details-2 d-flex gap-15 align-items-center">
+            <div class="popular-card-2 d-flex">
+              <div class="details-2 d-flex align-items-center">
                 <h4 class="">15% OFF</h4>
               </div>
-              <div class="details-2 d-flex gap-15 align-items-center">
+              <div class="details-2 d-flex align-items-center">
                 <h2>Home Speakers</h2>
               </div>
-              <div class="details-2 d-flex gap-15 align-items-center">
+              <div class="details-2 d-flex align-items-center">
                 <h4>
-                  From $99.99 or $1.66/mo. <br />
+                  From $99.99 or $16.65/mo. <br />
                   for 24 mo. *
                 </h4>
               </div>
               <div class="image-container">
-                <img src="/images/homepod.png" alt="homePod" class="homepod" />
+                <img src="/images/homepod.png" alt="homePod" class="homePod" />
               </div>
             </div>
           </div>
@@ -330,6 +345,7 @@
     </div>
   </section>
 
+  <!-- marquee -->
   <section class="marquee-wrapper home-wrapper-2 py-5">
     <div class="container-xxl">
       <div class="row">
@@ -352,6 +368,7 @@
     </div>
   </section>
 
+  <!-- blogs -->
   <section class="blog-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="row">
@@ -370,6 +387,7 @@ import "../../node_modules/vue3-marquee-slider/dist/style.css";
 import blogCard from "../components/cards/blogCard.vue";
 import ProductCard from "@/components/cards/productCard.vue";
 import SpecialProductCard from "../components/cards/specialProductCard.vue";
+import FamousCard from "../components/cards/famousCard.vue";
 </script>
 
 <style lang="scss" scoped></style>

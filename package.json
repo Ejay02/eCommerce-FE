@@ -11,8 +11,10 @@
   },
   "dependencies": {
     "@popperjs/core": "^2.11.8",
+    "@unhead/vue": "^1.9.14",
     "bootstrap": "^5.3.3",
     "swiper": "^11.1.4",
+    "unhead": "^1.9.14",
     "vue": "^3.4.29",
     "vue-router": "4",
     "vue-star-rating": "^2.1.0",

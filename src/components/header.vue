@@ -128,7 +128,7 @@
             <div class="menu-links">
               <div class="d-flex align-items-center gap-15">
                 <router-link class="" to="/">Home</router-link>
-                <router-link class="" to="/store">Our Store</router-link>
+                <router-link class="" to="/store">Store</router-link>
                 <router-link class="" to="/blogs">Blogs</router-link>
                 <router-link class="" to="/contact">Contact</router-link>
               </div>

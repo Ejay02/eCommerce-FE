@@ -4,6 +4,7 @@ import Home from "./pages/home.vue";
 import About from "./pages/about.vue";
 import Contact from "./pages/contact.vue";
 import Layout from "./components/layout.vue";
+import Store from "./pages/store.vue";
 import NotFound from "./components/error/notFound.vue";
 
 const routes = [
@@ -12,7 +13,7 @@ const routes = [
     component: Layout,
     children: [
       {
-        path: "home",
+        path: "",
         component: Home,
       },
       {
@@ -22,6 +23,10 @@ const routes = [
       {
         path: "contact",
         component: Contact,
+      },
+      {
+        path: "store",
+        component: Store,
       },
     ],
   },

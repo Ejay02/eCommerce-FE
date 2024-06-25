@@ -21,7 +21,7 @@ const props = defineProps({
   },
 });
 
-const baseUrl = "http://localhost:5173";
+const baseUrl = import.meta.env.VUE_APP_BASE_URL
 const canonicalUrl = `${baseUrl}/${props.canonicalSuffix}`;
 
 useHead({

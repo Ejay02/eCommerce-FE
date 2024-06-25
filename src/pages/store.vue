@@ -8,6 +8,7 @@
   <div class="store-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="col-3">
+        <!-- shop by -->
         <div class="filter-card mb-3">
           <h3 class="filter-title">Shop By Categories</h3>
           <div class="ps-0">
@@ -19,6 +20,7 @@
             </ul>
           </div>
         </div>
+        <!-- filter by -->
         <div class="filter-card mb-3">
           <h3 class="filter-title">Filter By</h3>
           <div class="">
@@ -27,21 +29,15 @@
             <div>
               <div class="form-check">
                 <label class="checkbox-label d-flex align-items-center gap-2">
-                  <input
-                    type="checkbox"
-                    v-model="inStock"
-                    class="form-check-input"
-                  />
+                  <input type="checkbox" class="form-check-input" />
+                  <!-- v-model="inStock" -->
                   In Stock(4)
                 </label>
               </div>
               <div class="form-check">
                 <label class="checkbox-label d-flex align-items-center gap-2">
-                  <input
-                    type="checkbox"
-                    v-model="outOfStock"
-                    class="form-check-input"
-                  />
+                  <input type="checkbox" class="form-check-input" />
+                  <!-- v-model="outOfStock" -->
                   Out of Stock(0)
                 </label>
               </div>
@@ -52,7 +48,7 @@
             <div class="d-flex align-items-center gap-10">
               <!-- From -->
               <div class="">$</div>
-              <div class="form-floating mb-3">
+              <div class="form-floating">
                 <input
                   type="email"
                   class="form-control"
@@ -64,7 +60,7 @@
               </div>
               <!-- To -->
               <div class="">$</div>
-              <div class="form-floating mb-3">
+              <div class="form-floating">
                 <input
                   type="email"
                   class="form-control"
@@ -96,20 +92,91 @@
                 <label class="checkbox-label d-flex align-items-center gap-2">
                   <input
                     type="checkbox"
-                    v-model="inStock"
                     class="form-check-input"
+                    id="color-1"
                   />
-                S (2)
+                  <!-- v-model="color" -->
+                  S (2)
+                </label>
+              </div>
+              <div class="form-check">
+                <label class="checkbox-label d-flex align-items-center gap-2">
+                  <input
+                    type="checkbox"
+                    class="form-check-input"
+                    id="color-2"
+                  />
+                  M (2)
                 </label>
               </div>
             </div>
           </div>
         </div>
+        <!-- tags -->
         <div class="filter-card mb-3">
           <h3 class="filter-title">Product Tag</h3>
+          <div class="">
+            <div class="product-tag d-flex flex-wrap align-items-center gap-10">
+              <span
+                v-for="(tag, index) in productTags"
+                :key="index"
+                class="badge bg-light text-secondary rounded-3 py-2 px-3"
+              >
+                {{ tag }}
+              </span>
+            </div>
+          </div>
         </div>
+        <!-- random -->
         <div class="filter-card mb-3">
           <h3 class="filter-title">Random Products</h3>
+          <div class="">
+            <div class="random-products d-flex mb-3">
+              <div class="w-50">
+                <img
+                  src="/images/headphone.jpg
+                "
+                  alt="headphone"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="w-50">
+                <h5>Kids headphones bulk 10 pack multi colored for students</h5>
+                <star-rating
+                  v-bind:star-size="15"
+                  v-bind:increment="0.5"
+                  :rating="3.5"
+                  :read-only="true"
+                  :show-rating="false"
+                ></star-rating>
+                <b class="price">$100</b>
+              </div>
+            </div>
+            <div class="random-products d-flex">
+              <div class="w-50">
+                <img
+                  src="/images/watch.jpg
+                "
+                  alt="smartwatch"
+                  class="img-fluid"
+                />
+              </div>
+              <div class="w-50">
+                <h5>
+                  Smart Watch for Men Women, Fitness Watch with Intelligent
+                  Reminders and Phone Calls
+                </h5>
+                <star-rating
+                  v-bind:star-size="15"
+                  v-bind:increment="0.5"
+                  :rating="4.5"
+                  :read-only="true"
+                  :show-rating="false"
+                ></star-rating>
+                <b class="price">$100</b>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="col-9"></div>
@@ -119,8 +186,20 @@
 
 <script setup>
 import { colors } from "@/utils/colors";
+import StarRating from "vue-star-rating";
 import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
+
+const productTags = [
+  "Headphones",
+  "Laptop",
+  "Mobile",
+  "Tablet",
+  "Sneakers",
+  "Alexa",
+  "Oppo",
+  "Speakers",
+];
 </script>
 
 <style lang="scss" scoped></style>

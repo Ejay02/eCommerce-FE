@@ -30,6 +30,7 @@
               aria-label="Search Product Here..."
               aria-describedby="basic-addon2"
             />
+            <!--  v-model.trim="msg"  -->
             <span class="input-group-text p-3" id="basic-addon2"
               ><i class="fa-solid fa-magnifying-glass"></i
             ></span>

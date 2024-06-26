@@ -16,7 +16,9 @@
               placeholder="ej@example.com"
               aria-label="ej@example.com"
               aria-describedby="basic-addon2"
+              
             />
+            <!-- v-model.trim="msg"  -->
             <button class="input-group-text p-2" id="basic-addon2"
               >Subscribe</button
             >

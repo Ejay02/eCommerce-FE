@@ -32,6 +32,7 @@
                   <label class="checkbox-label d-flex align-items-center gap-2">
                     <input type="checkbox" class="form-check-input" />
                     <!-- v-model="inStock" -->
+                     <!--  v-model.trim="msg"  -->
                     In Stock(4)
                   </label>
                 </div>
@@ -39,6 +40,7 @@
                   <label class="checkbox-label d-flex align-items-center gap-2">
                     <input type="checkbox" class="form-check-input" />
                     <!-- v-model="outOfStock" -->
+                     <!--  v-model.trim="msg"  -->
                     Out of Stock(0)
                   </label>
                 </div>
@@ -56,6 +58,7 @@
                     id="floatingInput"
                     placeholder="From"
                   />
+                  <!--  v-model.trim="msg"  -->
                   <!-- style="width: 40px; height: 40px" -->
                   <label for="floatingInput">From</label>
                 </div>
@@ -68,6 +71,7 @@
                     id="floatingInput1"
                     placeholder="To"
                   />
+                  <!--  v-model.trim="msg"  -->
                   <label for="floatingInput1">To</label>
                 </div>
               </div>
@@ -97,6 +101,7 @@
                       id="color-1"
                     />
                     <!-- v-model="color" -->
+                     <!--  v-model.trim="msg"  -->
                     S (2)
                   </label>
                 </div>
@@ -107,6 +112,7 @@
                       class="form-check-input"
                       id="color-2"
                     />
+                    <!-- v-model.trim="msg"  -->
                     M (2)
                   </label>
                 </div>

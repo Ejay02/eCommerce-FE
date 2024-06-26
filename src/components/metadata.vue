@@ -4,7 +4,6 @@
 
 <script setup>
 import { useHead } from "unhead";
-import { defineProps } from "vue";
 
 const props = defineProps({
   title: {
@@ -21,7 +20,7 @@ const props = defineProps({
   },
 });
 
-const baseUrl = import.meta.env.VUE_APP_BASE_URL
+const baseUrl = import.meta.env.VUE_APP_BASE_URL;
 const canonicalUrl = `${baseUrl}/${props.canonicalSuffix}`;
 
 useHead({

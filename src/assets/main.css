@@ -354,7 +354,7 @@ footer .input-group-text {
   Featured products
 =======================*/
 .products-container {
-  flex-wrap: nowrap;
+  flex-wrap: wrap;
   width: 100%;
 }
 

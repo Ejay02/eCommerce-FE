@@ -1,6 +1,10 @@
 <template>
-  <div class="row products-container">
-    <div class="col-2" v-for="(product, index) in limitedProducts" :key="index">
+  <div :class="`row products-container grid-${grid}`">
+    <div
+      :class="`col-${12 / grid}`"
+      v-for="(product, index) in limitedProducts"
+      :key="index"
+    >
       <router-link to="">
         <div class="product-card position-relative">
           <div class="wishlist-icon position-absolute">
@@ -34,63 +38,23 @@
 </template>
 
 <script setup>
-import { ref, computed } from "vue";
+import { computed } from "vue";
 import StarRating from "vue-star-rating";
 import ActionBar from "../actionBar.vue";
+import { products } from "../../utils/index";
 
 const props = defineProps({
   limit: {
     type: Number,
     default: null,
   },
+  grid: {
+    type: Number,
+    default: 6,
+  },
 });
 
-const products = ref([
-  {
-    image: "/images/prod-1.png",
-    brand: "Apple",
-    title: "AirPods Max",
-    rating: 3.8,
-    price: "$529.99",
-  },
-  {
-    image: "/images/prod-2.jpg",
-    brand: "Jazwares",
-    title: 'Squishmallows 16" Plush - Holiday Cat in Blue Scarf',
-    rating: 4.5,
-    price: "$24.99",
-  },
-  {
-    image: "/images/prod-3.jpg",
-    brand: "Sonos",
-    title: "Move 2 Speaker",
-    rating: 3.5,
-    price: "$449.00",
-  },
-  {
-    image: "/images/prod-4.jpg",
-    brand: "PELONIS",
-    title: "42-Inch Tower Fan, Standing Fan with Remote",
-    rating: 3,
-    price: "$65.88",
-  },
-  {
-    image: "/images/prod-5.jpg",
-    brand: "Sony",
-    title: "PlayStation 5 DualSense Wireless Controller",
-    rating: 4.5,
-    price: "$54.95",
-  },
-  {
-    image: "/images/prod-6.jpg",
-    brand: "Samsung",
-    title: "Samsung Galaxy Watch6",
-    rating: 4.4,
-    price: "$209",
-  },
-]);
-
 const limitedProducts = computed(() => {
-  return props.limit ? products.value.slice(0, props.limit) : products.value;
+  return props.limit ? products.slice(0, props.limit) : products;
 });
 </script>

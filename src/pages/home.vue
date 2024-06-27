@@ -287,60 +287,66 @@
         </div>
       </div>
       <div class="row products-container">
-        <!-- card 1 -->
-        <div class="col-2">
-          <div class="card">
-            <div class="popular-card d-flex gap-15">
-              <div class="details d-flex gap-15 align-items-center">
-                <img
-                  src="/images/prod-6.jpg"
-                  alt="watch"
-                  style="width: 40px; height: 40px"
-                />
-                <h6>Smart Watch</h6>
-              </div>
-              <div class="details d-flex gap-15 align-items-center">
-                <img
-                  src="/images/speaker.jpg"
-                  alt="speaker"
-                  style="width: 40px; height: 40px"
-                />
-                <h6>Speaker</h6>
-              </div>
-              <div class="details d-flex gap-15 align-items-center">
-                <img
-                  src="/images/laptop.jpg"
-                  alt="laptop"
-                  style="width: 40px; height: 40px"
-                />
-                <h6>Laptops</h6>
-              </div>
-            </div>
-          </div>
-        </div>
-        <!-- card 2 -->
-        <div class="col-2">
-          <div class="card">
-            <div class="popular-card-2 d-flex">
-              <div class="details-2 d-flex align-items-center">
-                <h4 class="">15% OFF</h4>
-              </div>
-              <div class="details-2 d-flex align-items-center">
-                <h2>Home Speakers</h2>
-              </div>
-              <div class="details-2 d-flex align-items-center">
-                <h4>
-                  From $99.99 or $16.65/mo. <br />
-                  for 24 mo. *
-                </h4>
-              </div>
-              <div class="image-container">
-                <img src="/images/homepod.png" alt="homePod" class="homePod" />
+        <div class="d-flex gap-30">
+          <!-- card 1 -->
+          <div class="col-2">
+            <div class="card">
+              <div class="popular-card d-flex gap-15">
+                <div class="details d-flex gap-15 align-items-center">
+                  <img
+                    src="/images/prod-6.jpg"
+                    alt="watch"
+                    style="width: 40px; height: 40px"
+                  />
+                  <h6>Smart Watch</h6>
+                </div>
+                <div class="details d-flex gap-15 align-items-center">
+                  <img
+                    src="/images/speaker.jpg"
+                    alt="speaker"
+                    style="width: 40px; height: 40px"
+                  />
+                  <h6>Speaker</h6>
+                </div>
+                <div class="details d-flex gap-15 align-items-center">
+                  <img
+                    src="/images/laptop.jpg"
+                    alt="laptop"
+                    style="width: 40px; height: 40px"
+                  />
+                  <h6>Laptops</h6>
+                </div>
               </div>
             </div>
           </div>
+          <!-- card 2 -->
+          <div class="col-2">
+            <div class="card">
+              <div class="popular-card-2 d-flex">
+                <div class="details-2 d-flex align-items-center">
+                  <h4 class="">15% OFF</h4>
+                </div>
+                <div class="details-2 d-flex align-items-center">
+                  <h2>Home Speakers</h2>
+                </div>
+                <div class="details-2 d-flex align-items-center">
+                  <h4>
+                    From $99.99 or $16.65/mo. <br />
+                    for 24 mo. *
+                  </h4>
+                </div>
+                <div class="image-container">
+                  <img
+                    src="/images/homepod.png"
+                    alt="homePod"
+                    class="homePod"
+                  />
+                </div>
+              </div>
+            </div>
+          </div>
+          <ProductCard :limit="4" :grid="4"/>
         </div>
-        <ProductCard :limit="4" />
       </div>
     </div>
   </section>
@@ -383,11 +389,11 @@
 
 <script setup>
 import { VueMarqueeSlider } from "vue3-marquee-slider";
-import "../../node_modules/vue3-marquee-slider/dist/style.css";
 import blogCard from "../components/cards/blogCard.vue";
-import ProductCard from "@/components/cards/productCard.vue";
-import SpecialProductCard from "../components/cards/specialProductCard.vue";
 import FamousCard from "../components/cards/famousCard.vue";
+import ProductCard from "@/components/cards/productCard.vue";
+import "../../node_modules/vue3-marquee-slider/dist/style.css";
+import SpecialProductCard from "../components/cards/specialProductCard.vue";
 </script>
 
 <style lang="scss" scoped></style>

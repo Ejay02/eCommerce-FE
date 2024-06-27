@@ -32,7 +32,7 @@
                   <label class="checkbox-label d-flex align-items-center gap-2">
                     <input type="checkbox" class="form-check-input" />
                     <!-- v-model="inStock" -->
-                     <!--  v-model.trim="msg"  -->
+                    <!--  v-model.trim="msg"  -->
                     In Stock(4)
                   </label>
                 </div>
@@ -40,7 +40,7 @@
                   <label class="checkbox-label d-flex align-items-center gap-2">
                     <input type="checkbox" class="form-check-input" />
                     <!-- v-model="outOfStock" -->
-                     <!--  v-model.trim="msg"  -->
+                    <!--  v-model.trim="msg"  -->
                     Out of Stock(0)
                   </label>
                 </div>
@@ -101,7 +101,7 @@
                       id="color-1"
                     />
                     <!-- v-model="color" -->
-                     <!--  v-model.trim="msg"  -->
+                    <!--  v-model.trim="msg"  -->
                     S (2)
                   </label>
                 </div>
@@ -210,13 +210,13 @@
                 <p class="totalProducts mb-0">21 Products</p>
                 <div class="d-flex gap-10 align-items-center grid">
                   <img
-                    @click="setGrid(4)"
+                    @click="setGrid(6)"
                     src="/images/gr4.svg"
                     class="d-block img-fluid"
                     alt="grid"
                   />
                   <img
-                    @click="setGrid(3)"
+                    @click="setGrid(4)"
                     src="/images/gr3.svg"
                     class="d-block img-fluid"
                     alt="grid"
@@ -238,8 +238,11 @@
             </div>
           </div>
           <div class="products-list pb-5">
-            <productCard :limit="3" />
+            <div class="d-flex gap-10 flex-wrap">
+              <storeProductCard :grid="grid" />
+            </div>
           </div>
+          <!-- <productCard :limit="2" :grid="grid" /> -->
         </div>
       </div>
     </div>
@@ -250,25 +253,44 @@
 import { ref } from "vue";
 import { colors } from "@/utils/colors";
 import StarRating from "vue-star-rating";
+import { productTags } from "@/utils/index";
 import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
-import productCard from "@/components/cards/productCard.vue";
+import storeProductCard from "@/components/cards/storeProductCard.vue";
 
-const productTags = [
-  "Headphones",
-  "Laptop",
-  "Mobile",
-  "Tablet",
-  "Sneakers",
-  "Alexa",
-  "Oppo",
-  "Speakers",
-];
+const grid = ref(6);
 
-const grid = ref(0);
-function setGrid(value) {
+const setGrid = (value) => {
   grid.value = value;
-}
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.store {
+  padding: 20px;
+}
+
+.grid img {
+  cursor: pointer;
+}
+
+.products-list {
+  margin-top: 20px;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+}
+
+.products-list .d-flex {
+  width: 100%;
+}
+
+.products-list .col-1,
+.products-list .col-2,
+.products-list .col-3,
+.products-list .col-4,
+.products-list .col-6,
+.products-list .col-12 {
+  padding: 0 10px;
+}
+</style>

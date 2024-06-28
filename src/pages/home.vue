@@ -1,4 +1,10 @@
 <template>
+  <Metadata
+    title="BuyZone/home"
+    description="Stay updated with BuyZone's latest articles, tips, and reviews."
+    canonicalSuffix="/home"
+  />
+
   <!-- main banner -->
   <section class="home-wrapper-1 py-5">
     <div class="container-xxl">
@@ -345,7 +351,7 @@
               </div>
             </div>
           </div>
-          <ProductCard :limit="4" :grid="4"/>
+          <ProductCard :limit="4" :grid="4" />
         </div>
       </div>
     </div>
@@ -388,6 +394,8 @@
 </template>
 
 <script setup>
+import Metadata from "@/components/metadata.vue";
+
 import { VueMarqueeSlider } from "vue3-marquee-slider";
 import blogCard from "../components/cards/blogCard.vue";
 import FamousCard from "../components/cards/famousCard.vue";

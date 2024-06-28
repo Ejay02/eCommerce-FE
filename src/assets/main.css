@@ -5,13 +5,6 @@
   font-style: normal;
 }
 
-/* * {
-  margin: 0;
-  padding: 0;
-  width: 100%;
-  box-sizing: border-box;
-} */
-
 html,
 body {
   margin: 0;
@@ -197,7 +190,6 @@ footer .input-group-text {
   line-height: 64px;
   letter-spacing: -2px;
   font-weight: 500px;
-  /* padding: 0; */
   text-transform: none;
 }
 
@@ -228,7 +220,6 @@ footer .input-group-text {
   line-height: 34px;
   letter-spacing: -2px;
   font-weight: 500px;
-  /* padding: 0; */
   text-transform: none;
 }
 
@@ -309,7 +300,6 @@ footer .input-group-text {
 =======================*/
 .blog-card {
   background-color: white;
-  /* padding: 20px; */
   border-radius: 10px;
   overflow: hidden;
   cursor: pointer;
@@ -551,7 +541,6 @@ footer .input-group-text {
   line-height: 24px;
   font-weight: 100px;
   color: white;
-  /* margin: 0;  */
 }
 
 .famous-content-1 h5 {
@@ -610,7 +599,6 @@ footer .input-group-text {
   color: #fff !important;
   padding: 10px 20px;
   border-radius: 5px;
-  /* background: #39ac31; */
   background: var(--color-febd69);
   margin: 20px 0;
   display: inline-block;
@@ -707,4 +695,42 @@ footer .input-group-text {
   background-color: #f2f2f2;
   padding: 8px;
   border-radius: 3px;
+}
+
+/*======================
+   Contact Page======
+=======================*/
+.contact-inner-wrapper {
+  padding: 30px 20px;
+  /* border-radius: 15px; */
+  background-color: white;
+  gap: 15px;
+}
+
+.contact-inner-wrapper > div {
+  width: 48%;
+}
+
+.contact-title {
+  font-size: 26px;
+  font-weight: 500px;
+  line-height: 35px;
+  text-align: left;
+}
+
+.contact-inner-wrapper form .form-control {
+  background-color: var(--color-f5f5f7);
+  border-radius: 10px;
+  border-color: transparent;
+  padding: 10px;
+}
+
+.contact-inner-wrapper ul {
+  list-style: none;
+}
+
+.contact-inner-wrapper address,
+.contact-inner-wrapper a,
+.contact-inner-wrapper p {
+  color: var(--color-777777);
 }

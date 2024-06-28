@@ -1,7 +1,7 @@
 <template>
   <Metadata
-    title="BuyZone/Store"
-    description="This is my store page"
+    title="BuyZone/store"
+    description="Discover top products at BuyZone. Shop tech gadgets, fashion, and more at great prices."
     canonicalSuffix="/store"
   />
   <Breadcrumb title="Store" />

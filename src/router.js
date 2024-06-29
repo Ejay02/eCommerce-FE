@@ -5,6 +5,7 @@ import Blogs from "./pages/blogs.vue";
 import About from "./pages/about.vue";
 import Store from "./pages/store.vue";
 import Contact from "./pages/contact.vue";
+import Wishlist from "./pages/wishlist.vue";
 import Layout from "./components/layout.vue";
 import Compare from "./pages/compareProducts.vue";
 import NotFound from "./components/error/notFound.vue";
@@ -37,6 +38,10 @@ const routes = [
       {
         path: "compare",
         component: Compare,
+      },
+      {
+        path: "wishlist",
+        component: Wishlist,
       },
     ],
   },

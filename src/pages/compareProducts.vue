@@ -29,7 +29,7 @@
             </div>
             <div class="compare-product-details">
               <h5 class="title">{{ product.title }}</h5>
-              <h6 class="price mb-3 mt-3">${{ product.price.toFixed(2) }}</h6>
+              <h6 class="price mb-3 mt-3">$ {{ product.price.toFixed(2) }}</h6>
               <div>
                 <div class="product-detail">
                   <h5>Brand:</h5>
@@ -97,7 +97,7 @@ const products = ref([
   {
     image: "/images/tab.jpg",
     title:
-      "Smart Watch for Men Women, Fitness Watch with Intelligent Reminders and Phone Calls",
+      "Sleek, lightweight tablet with a high-resolution touch screen, perfect for both work and play",
     price: 100,
     brand: "Havels",
     type: "Tablet",
@@ -109,7 +109,7 @@ const products = ref([
   {
     image: "/images/speaker.jpg",
     title:
-      "Smart Watch for Men Women, Fitness Watch with Intelligent Reminders and Phone Calls",
+      "Compact, high-quality speakers delivering crisp, clear sound. Perfect for music, movies, and gaming",
     price: 56.7,
     brand: "Bajaj",
     type: "Speaker",
@@ -121,6 +121,4 @@ const products = ref([
 ]);
 </script>
 
-<style scoped>
-
-</style>
+<style scoped></style>

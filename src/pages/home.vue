@@ -20,7 +20,7 @@
             <div class="main-banner-content position-absolute">
               <h4>SUPERCHARGED FOR PROS</h4>
               <h5>iPhone 15 Pro</h5>
-              <p>From $999.00 or $41.62/mo.</p>
+              <p>From $ 999.00 or $ 41.62/mo.</p>
               <router-link to="" class="button">BUY NOW</router-link>
             </div>
           </div>
@@ -41,8 +41,8 @@
                 <h4>Best sale</h4>
                 <h5>MacBook Pro 14</h5>
                 <p>
-                  From $1699.00 or <br />
-                  $64.62/mo.
+                  From $ 1699.00 or <br />
+                  $ 64.62/mo.
                 </p>
               </div>
             </div>
@@ -73,8 +73,8 @@
                 <h4>New Arrival</h4>
                 <h5>Buy iPad Air</h5>
                 <p>
-                  From $599 or <br />
-                  $49.91/mo. for 12 mo. *
+                  From $ 599 or <br />
+                  $ 49.91/mo. for 12 mo. *
                 </p>
               </div>
             </div>
@@ -337,7 +337,7 @@
                 </div>
                 <div class="details-2 d-flex align-items-center">
                   <h4>
-                    From $99.99 or $16.65/mo. <br />
+                    From $ 99.99 or $ 16.65/mo. <br />
                     for 24 mo. *
                   </h4>
                 </div>

@@ -160,7 +160,7 @@
                     :read-only="true"
                     :show-rating="false"
                   ></star-rating>
-                  <b class="price">$100</b>
+                  <b class="price">$ 100</b>
                 </div>
               </div>
               <div class="random-products d-flex">
@@ -184,7 +184,7 @@
                     :read-only="true"
                     :show-rating="false"
                   ></star-rating>
-                  <b class="price">$100</b>
+                  <b class="price">$ 100</b>
                 </div>
               </div>
             </div>

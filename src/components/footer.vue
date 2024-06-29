@@ -84,7 +84,7 @@
             <router-link to="" class="text-white py-2 mb-1"
               >Terms Of Service</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1">Blogs</router-link>
+            <router-link to="/blogs" class="text-white py-2 mb-1">Blogs</router-link>
           </div>
         </div>
         <div class="col-2">
@@ -95,7 +95,7 @@
               >About Us</router-link
             >
             <router-link to="" class="text-white py-2 mb-1">FAQs</router-link>
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/contact" class="text-white py-2 mb-1"
               >Contact</router-link
             >
             <router-link to="" class="text-white py-2 mb-1"

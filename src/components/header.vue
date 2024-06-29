@@ -42,7 +42,7 @@
           >
             <div>
               <router-link
-                to=""
+                to="/compare"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/compare.svg" alt="compare" />
                 <p class="mb-0">

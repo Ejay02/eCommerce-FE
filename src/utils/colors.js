@@ -1,24 +1,24 @@
 export const colors = [
-  "#FF0000", // Red
+  "#000000", // Black
+  "#808080", // Gray
+  "#FFB6C1", // Light Pink
+  "#C0C0C0", // Silver
   "#00FF00", // Green
+  "#FF0000", // Red
   "#0000FF", // Blue
   "#FFFF00", // Yellow
   "#FF00FF", // Magenta
   "#00FFFF", // Cyan
   "#FFFFFF", // White
-  "#000000", // Black
   "#800000", // Maroon
   "#808000", // Olive
   "#008000", // Dark Green
   "#800080", // Purple
-  "#808080", // Gray
-  "#C0C0C0", // Silver
   "#FFA500", // Orange
   "#A52A2A", // Brown
   "#000080", // Navy
   "#ADD8E6", // Light Blue
   "#90EE90", // Light Green
-  "#FFB6C1", // Light Pink
   "#FFD700", // Gold
   "#D3D3D3", // Light Gray
   "#4B0082", // Indigo

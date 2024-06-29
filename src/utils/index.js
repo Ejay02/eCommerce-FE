@@ -17,7 +17,7 @@ export const products = [
     rating: 3.8,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$529.99",
+    price: "$ 529.99",
   },
   {
     image: "/images/prod-2.jpg",
@@ -26,7 +26,7 @@ export const products = [
     rating: 4.5,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$24.99",
+    price: "$ 24.99",
   },
   {
     image: "/images/prod-3.jpg",
@@ -35,7 +35,7 @@ export const products = [
     rating: 3.5,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$449.00",
+    price: "$ 449.00",
   },
   {
     image: "/images/prod-4.jpg",
@@ -44,7 +44,7 @@ export const products = [
     rating: 3,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$65.88",
+    price: "$ 65.88",
   },
   {
     image: "/images/prod-5.jpg",
@@ -53,7 +53,7 @@ export const products = [
     rating: 4.5,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$54.95",
+    price: "$ 54.95",
   },
   {
     image: "/images/prod-6.jpg",
@@ -62,6 +62,6 @@ export const products = [
     rating: 4.4,
     description:
       "At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate non provident, similique sunt...",
-    price: "$209",
+    price: "$ 209",
   },
 ];

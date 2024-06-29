@@ -1,5 +1,5 @@
 <template>
-  <footer class="py-4 ">
+  <footer class="py-4">
     <div class="container-xxl">
       <div class="row align-items-center">
         <div class="col-5">
@@ -16,12 +16,11 @@
               placeholder="ej@example.com"
               aria-label="ej@example.com"
               aria-describedby="basic-addon2"
-              
             />
             <!-- v-model.trim="msg"  -->
-            <button class="input-group-text p-2" id="basic-addon2"
-              >Subscribe</button
-            >
+            <button class="input-group-text p-2" id="basic-addon2">
+              Subscribe
+            </button>
           </div>
         </div>
       </div>
@@ -46,12 +45,16 @@
             >
 
             <div class="social-icons d-flex align-items-center gap-15">
-              <a href="https://github.com/Ejay02" class="text-white fs-5"
+              <a
+                href="https://github.com/Ejay02"
+                class="text-white fs-5"
+                target="_blank"
                 ><i class="fa-brands fa-github"></i
               ></a>
               <a
                 href="https://www.linkedin.com/in/ejakpovi/"
                 class="text-white fs-5"
+                target="_blank"
                 ><i class="fa-brands fa-linkedin"></i
               ></a>
 
@@ -84,7 +87,9 @@
             <router-link to="" class="text-white py-2 mb-1"
               >Terms Of Service</router-link
             >
-            <router-link to="/blogs" class="text-white py-2 mb-1">Blogs</router-link>
+            <router-link to="/blogs" class="text-white py-2 mb-1"
+              >Blogs</router-link
+            >
           </div>
         </div>
         <div class="col-2">

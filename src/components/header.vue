@@ -3,7 +3,7 @@
     <div class="container-xxl">
       <div class="row">
         <div class="col-6">
-          <p class="text-white mb-0">Free Shipping Over $100 & Free Returns</p>
+          <p class="text-white mb-0">Free Shipping Over $ 100 & Free Returns</p>
         </div>
         <div class="col-6">
           <p class="text-end text-white mb-0">
@@ -53,7 +53,7 @@
             </div>
             <div>
               <router-link
-                to=""
+                to="/wishlist"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/wishlist.svg" alt="wishlist" />
                 <p class="mb-0">
@@ -80,7 +80,7 @@
                 ><img src="/images/cart.svg" alt="cart" />
                 <div class="d-flex flex-column gap-10">
                   <span class="badge bg-white text-dark">0</span>
-                  <p class="mb-0">$0.00</p>
+                  <p class="mb-0">$ 0.00</p>
                 </div>
               </router-link>
             </div>

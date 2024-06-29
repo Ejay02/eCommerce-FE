@@ -17,9 +17,9 @@
           >
           </star-rating>
           <p class="price">
-            <span class="red-p">$529.99</span> &nbsp;
+            <span class="red-p">$ 529.99</span> &nbsp;
 
-            <del>$600</del>
+            <del>$ 600</del>
           </p>
           <div class="discount-countdown d-flex align-items-center gap-10">
             <p class="mb-0"><b>5 </b> Days</p>

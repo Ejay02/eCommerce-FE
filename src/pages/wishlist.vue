@@ -68,7 +68,7 @@
             <div class="px-3 py-3">
               <h5 class="title">
                 Compact, high-quality speakers delivering crisp, clear sound.
-                Perfect for music, movies, ...
+                Perfect for music, ...
               </h5>
               <h6 class="price">$ 56.70</h6>
             </div>

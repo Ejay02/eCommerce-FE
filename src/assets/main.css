@@ -808,7 +808,7 @@ footer .input-group-text {
   border-radius: 10px;
 }
 
-.auth-card h3{
+.auth-card h3 {
   font-size: 19px;
   font-weight: 500px;
   color: var(--color-777777);

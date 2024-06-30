@@ -10,9 +10,9 @@
       <div class="row">
         <div class="col-12">
           <div class="auth-card">
-            <h3 class="text-center mb-3">Reset Your Password</h3>
+            <h3 class="text-center mb-3">Forgot Your Password?</h3>
             <h6 class="text-center mb-3 mt-2">
-              We will send you an email to reset your password
+              No worries, We will send you an email to reset your password
             </h6>
             <form action="" class="d-flex flex-column gap-15">
               <div>

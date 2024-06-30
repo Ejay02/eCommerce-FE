@@ -64,7 +64,7 @@
             </div>
             <div>
               <router-link
-                to=""
+                to="/account/login"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/user.svg" alt="user" />
                 <p class="mb-0">

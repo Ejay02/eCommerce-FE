@@ -21,10 +21,10 @@
 
             <del>$ 600</del>
           </p>
-          <div class="discount-countdown d-flex align-items-center gap-10">
+          <div class="discount-countdown d-flex align-items-center">
             <p class="mb-0"><b>5 </b> Days</p>
 
-            <div class="d-flex gap-10 align-items-center">
+            <div class="d-flex align-items-center">
               <span class="badge rounded-circle bg-danger">05</span>:
               <span class="badge rounded-circle bg-danger">02</span>:
               <span class="badge rounded-circle bg-danger">00</span>

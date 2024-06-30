@@ -97,7 +97,8 @@ const products = ref([
   {
     image: "/images/tab.jpg",
     title:
-      "Sleek, lightweight tablet with a high-resolution touch screen, perfect for both work and play",
+      "Sleek, lightweight tablet with a high-resolution touch screen, perfect for...",
+    // both work and play
     price: 100,
     brand: "Havels",
     type: "Tablet",
@@ -109,7 +110,8 @@ const products = ref([
   {
     image: "/images/speaker.jpg",
     title:
-      "Compact, high-quality speakers delivering crisp, clear sound. Perfect for music, movies, and gaming",
+      "Compact, high-quality speakers delivering crisp, clear sound. Perfect for music, mov...",
+    // ies, and gaming
     price: 56.7,
     brand: "Bajaj",
     type: "Speaker",

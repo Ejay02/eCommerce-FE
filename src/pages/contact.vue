@@ -30,6 +30,7 @@
                 </div>
                 <div>
                   <input
+                    autofocus
                     type="email"
                     class="form-control"
                     placeholder="Email"
@@ -37,6 +38,7 @@
                 </div>
                 <div>
                   <input
+                    autofocus
                     type="number"
                     class="form-control"
                     placeholder="Mobile number"

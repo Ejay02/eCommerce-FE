@@ -5,10 +5,14 @@ import Blogs from "./pages/blogs.vue";
 import About from "./pages/about.vue";
 import Store from "./pages/store.vue";
 import Contact from "./pages/contact.vue";
+import Login from "./pages/auth/login.vue";
 import Wishlist from "./pages/wishlist.vue";
+import SignUp from "./pages/auth/signup.vue";
 import Layout from "./components/layout.vue";
 import Compare from "./pages/compareProducts.vue";
 import NotFound from "./components/error/notFound.vue";
+import ForgotPassword from "./pages/auth/forgotPassword.vue";
+import ResetPassword from "./pages/auth/resetPassword.vue";
 
 const routes = [
   {
@@ -42,6 +46,22 @@ const routes = [
       {
         path: "wishlist",
         component: Wishlist,
+      },
+      {
+        path: "account/login",
+        component: Login,
+      },
+      {
+        path: "account/signup",
+        component: SignUp,
+      },
+      {
+        path: "account/forgot-password",
+        component: ForgotPassword,
+      },
+      {
+        path: "account/reset-password",
+        component: ResetPassword,
       },
     ],
   },

@@ -1,7 +1,7 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "./pages/home.vue";
-import Blogs from "./pages/blogs.vue";
+import Blogs from "./pages/blog/blogs.vue";
 import About from "./pages/about.vue";
 import Store from "./pages/store.vue";
 import Contact from "./pages/contact.vue";
@@ -9,6 +9,7 @@ import Login from "./pages/auth/login.vue";
 import Wishlist from "./pages/wishlist.vue";
 import SignUp from "./pages/auth/signup.vue";
 import Layout from "./components/layout.vue";
+import BlogView from "./pages/blog/blogView.vue";
 import Compare from "./pages/compareProducts.vue";
 import NotFound from "./components/error/notFound.vue";
 import ForgotPassword from "./pages/auth/forgotPassword.vue";
@@ -39,6 +40,7 @@ const routes = [
         path: "blogs",
         component: Blogs,
       },
+      { path: "blog/:id", component: BlogView },
       {
         path: "compare",
         component: Compare,

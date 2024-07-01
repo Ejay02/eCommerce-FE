@@ -11,9 +11,14 @@
         </div>
         <div class="blog-content">
           <p class="date">{{ blog.date }}</p>
-          <h5 class="title">{{ blog.title }}</h5>
-          <p class="desc">{{ blog.description }}</p>
-          <router-link :to="blog.link" class="button">Read More</router-link>
+          <h5 class="title text-truncate">{{ blog.title }}</h5>
+          <p class="desc" style="color: gray; font-size: small">
+            {{ blog.description }}
+          </p>
+
+          <router-link :to="`/blog/${blog.id}`" class="button"
+            >Read More</router-link
+          >
         </div>
       </div>
     </div>
@@ -44,7 +49,8 @@ const blogs = [
     date: "15 April, 2024",
     title: "Streamline Your Checkout Process",
     description:
-      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction and increase sales with our tips.",
+      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction ...",
+    // and increase sales with our tips.
     link: "/blog-2",
   },
   {

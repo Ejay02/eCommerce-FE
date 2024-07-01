@@ -49,8 +49,8 @@ const blogs = [
     date: "15 April, 2024",
     title: "Streamline Your Checkout Process",
     description:
-      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction ...",
-    // and increase sales with our tips.
+      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction and increase sales with our tips.",
+    //
     link: "/blog-2",
   },
   {

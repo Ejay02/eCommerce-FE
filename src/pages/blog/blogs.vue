@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/blogs"
+    title="BuyZone | Blogs"
     description="Stay updated with BuyZone's latest articles, tips, and reviews."
     canonicalSuffix="/blogs"
   />
@@ -23,7 +23,7 @@
         </div>
         <div class="col-9">
           <div class="row">
-            <blogCard :isBigCard="true"  />
+            <blogCard :isBigCard="true" :blogs="blogs" />
           </div>
         </div>
       </div>

@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/store"
+    title="BuyZone | Store"
     description="Discover top products at BuyZone. Shop tech gadgets, fashion, and more at great prices."
     canonicalSuffix="/store"
   />

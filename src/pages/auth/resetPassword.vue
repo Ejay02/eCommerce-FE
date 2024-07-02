@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/account/reset-password"
+    title="BuyZone | Reset-password"
     description="Update your account security by setting a new password."
     canonicalSuffix="/account/reset-password"
   />

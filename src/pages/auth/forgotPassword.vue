@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/account/forgot-password"
+    title="BuyZone | Forgot-password"
     description="Forgot password? No worries! Reset it in seconds and get back to it!"
     canonicalSuffix="/account/forgot-password"
   />

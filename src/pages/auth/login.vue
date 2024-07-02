@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/account/login"
+    title="BuyZone | Login"
     description="Login to the zone"
     canonicalSuffix="/account/login"
   />

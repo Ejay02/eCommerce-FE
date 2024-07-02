@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/wishlist"
+    title="BuyZone | Wishlist"
     description="Stay updated with BuyZone's latest articles, tips, and reviews."
     canonicalSuffix="/wishlist"
   />

@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/compare"
+    title="BuyZone | Compare"
     description="Compare products side-by-side to make informed decisions."
     canonicalSuffix="/compare"
   />

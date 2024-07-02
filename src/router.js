@@ -14,6 +14,9 @@ import Compare from "./pages/compareProducts.vue";
 import NotFound from "./components/error/notFound.vue";
 import ForgotPassword from "./pages/auth/forgotPassword.vue";
 import ResetPassword from "./pages/auth/resetPassword.vue";
+import PrivacyPolicy from "./pages/policies/privacyPolicy.vue";
+import RefundPolicy from "./pages/policies/refundPolicy.vue";
+import ShippingPolicy from "./pages/policies/shippingPolicy.vue";
 
 const routes = [
   {
@@ -64,6 +67,18 @@ const routes = [
       {
         path: "account/reset-password",
         component: ResetPassword,
+      },
+      {
+        path: "privacy-policy",
+        component: PrivacyPolicy,
+      },
+      {
+        path: "refund-policy",
+        component: RefundPolicy,
+      },
+      {
+        path: "shipping-policy",
+        component: ShippingPolicy,
       },
     ],
   },

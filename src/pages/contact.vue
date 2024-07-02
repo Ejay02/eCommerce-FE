@@ -1,6 +1,6 @@
 <template>
   <Metadata
-    title="BuyZone/contact"
+    title="BuyZone | Contact"
     description="Questions, compliments, or just want to chat? Reach out"
     canonicalSuffix="/contact"
   />

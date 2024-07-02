@@ -75,13 +75,13 @@
         <div class="col-2">
           <h4 class="text-white mb-4">Information</h4>
           <div class="footer-link d-flex flex-column">
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/privacy-policy" class="text-white py-2 mb-1"
               >Privacy Policy</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/refund-policy" class="text-white py-2 mb-1"
               >Refund Policy</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/shipping-policy" class="text-white py-2 mb-1"
               >Shipping Policy</router-link
             >
             <router-link to="" class="text-white py-2 mb-1"

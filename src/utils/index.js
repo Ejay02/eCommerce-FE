@@ -36,11 +36,13 @@ export const products = [
         name: "John Doe",
         rating: 5,
         comment: "Amazing sound quality and very comfortable to wear!",
+        date: "2 Feb, 2024",
       },
       {
         name: "Jane Smith",
         rating: 4,
         comment: "Great headphones but a bit pricey.",
+        date: "17 May, 2024",
       },
     ],
     images: [
@@ -52,6 +54,14 @@ export const products = [
     sizes: ["One Size"],
     colorCount: 4,
     count: 125,
+    shippingAndReturns: {
+      shipping: "Free shipping on orders over $50",
+      returns: "30-day return policy",
+    },
+    materials: ["Aluminum", "Stainless Steel", "Memory Foam"],
+    dimensions: "187.3 x 168.6 x 83.4 mm",
+    careInstructions:
+      "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
   {
     id: 2,
@@ -73,11 +83,13 @@ export const products = [
         name: "Emily Johnson",
         rating: 5,
         comment: "Absolutely adorable and so soft!",
+        date: "14 Feb, 2024",
       },
       {
         name: "Michael Brown",
         rating: 4,
         comment: "My kids love it, perfect for the holidays.",
+        date: "2 Jan, 2024",
       },
     ],
     images: [
@@ -89,6 +101,16 @@ export const products = [
     sizes: ["S", "M", "L", "XXL"],
     colorCount: 4,
     count: 32,
+    shippingAndReturns: {
+      shipping: "Standard shipping rates apply",
+
+      returns:
+        "30-day return policy. All returns must comply with our returns policy.",
+    },
+    materials: ["Polyester"],
+    dimensions: "16 inches",
+    careInstructions:
+      "Spot clean with mild soap and water. Do not machine wash.",
   },
   {
     id: 3,
@@ -110,11 +132,13 @@ export const products = [
         name: "Sarah Davis",
         rating: 4,
         comment: "Great sound quality, but a bit heavy to carry around.",
+        date: "23 Jan, 2024",
       },
       {
         name: "David Wilson",
         rating: 3,
         comment: "Good speaker but the battery life could be better.",
+        date: "23 June, 2024",
       },
     ],
     images: [
@@ -126,6 +150,15 @@ export const products = [
     sizes: ["One Size"],
     colorCount: 3,
     count: 75,
+    shippingAndReturns: {
+      shipping: "Free shipping on orders over $50",
+      returns:
+        "30-day return policy.  All returns must comply with our returns policy.",
+    },
+    materials: ["Plastic", "Metal"],
+    dimensions: "240 x 160 x 126 mm",
+    careInstructions:
+      "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
   {
     id: 4,
@@ -147,11 +180,13 @@ export const products = [
         name: "Chris Martinez",
         rating: 3,
         comment: "Works well but a bit noisy at the highest setting.",
+        date: "10 April, 2024",
       },
       {
         name: "Amanda Anderson",
         rating: 3,
         comment: "Decent fan, but the remote control could be more responsive.",
+        date: "3 July, 2024",
       },
     ],
     images: [
@@ -163,6 +198,15 @@ export const products = [
     sizes: ["One Size"],
     colorCount: 1,
     count: 60,
+    shippingAndReturns: {
+      shipping: "Standard shipping rates apply",
+      returns:
+        "30-day return policy.  All returns must comply with our returns policy.",
+    },
+    materials: ["Plastic", "Metal"],
+    dimensions: "42 inches",
+    careInstructions:
+      "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
   {
     id: 5,
@@ -190,11 +234,13 @@ export const products = [
         name: "Jessica Lee",
         rating: 5,
         comment: "Best controller I've ever used, super responsive!",
+        date: "15 Feb, 2024",
       },
       {
         name: "Daniel White",
         rating: 4,
         comment: "Great controller but the battery life could be longer.",
+        date: "29 March, 2024",
       },
     ],
     images: [
@@ -206,6 +252,15 @@ export const products = [
     sizes: ["One Size"],
     colorCount: 4,
     count: 32,
+    shippingAndReturns: {
+      shipping: "Free shipping on orders over $50",
+      returns:
+        "30-day return policy.  All returns must comply with our returns policy.",
+    },
+    materials: ["Plastic", "Metal"],
+    dimensions: "160 x 66 x 106 mm",
+    careInstructions:
+      "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
   {
     id: 6,
@@ -233,11 +288,13 @@ export const products = [
         name: "Megan Green",
         rating: 5,
         comment: "Love this watch! Great for tracking my workouts.",
+        date: "28 Feb, 2024",
       },
       {
         name: "Brian Hall",
         rating: 4,
         comment: "Very functional but a bit pricey.",
+        date: "20 May, 2024",
       },
     ],
     images: [
@@ -249,5 +306,14 @@ export const products = [
     sizes: ["S", "M", "L", "XL"],
     colorCount: 3,
     count: 100,
+    shippingAndReturns: {
+      shipping: "Free shipping on orders over $50",
+      returns:
+        "30-day return policy.  All returns must comply with our returns policy.",
+    },
+    materials: ["Stainless Steel", "Silicone"],
+    dimensions: "45 x 45 x 12 mm",
+    careInstructions:
+      "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
 ];

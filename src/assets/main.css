@@ -968,7 +968,7 @@ Main Product Page ****
 }
 
 .main-product-details {
-  padding: 20px;
+  padding: 30px 20px;
   background-color: white;
   border-radius: 10px;
 }
@@ -980,8 +980,8 @@ Main Product Page ****
 .main-product-details h3.title {
   font-size: 18px;
   font-weight: 600px;
-  color: var(--color-1c1c1b);
   margin-bottom: 10px;
+  color: var(--color-1c1c1b);
 }
 
 .main-product-details p.price {
@@ -1013,3 +1013,6 @@ Main Product Page ****
   font-size: 14px;
   color: var(--color-777777);
 }
+
+
+

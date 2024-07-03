@@ -15,33 +15,35 @@
       :key="index"
     >
       <div class="store-product-card h-100 position-relative">
-        <div class="wishlist-icon position-absolute">
-          <router-link to="">
+        <router-link :to="`/product/${product.id}`">
+          <div class="wishlist-icon position-absolute">
             <img src="/images/wish.svg" alt="wishlist" />
-          </router-link>
-        </div>
-        <div class="product-image">
-          <img
-            :src="product.image"
-            :alt="`product image of ${product.title}`"
-            class="img-fluid"
-          />
-        </div>
+          </div>
+          <div class="product-image">
+            <img
+              :src="product.image"
+              :alt="`product image of ${product.title}`"
+              class="img-fluid"
+            />
+          </div>
 
-        <div class="product-details">
-          <h6 class="brand">{{ product.brand }}</h6>
-          <h5 class="product-title">{{ product.title }}</h5>
-          <star-rating
-            v-bind:star-size="15"
-            v-bind:increment="0.5"
-            :rating="product.rating"
-            :read-only="true"
-            :show-rating="false"
-          ></star-rating>
-          <p v-if="grid === 1" class="description">{{ product.description }}</p>
-          <p class="price">{{ product.price }}</p>
-        </div>
-        <actionBar />
+          <div class="product-details">
+            <h6 class="brand">{{ product.brand }}</h6>
+            <h5 class="product-title">{{ product.title }}</h5>
+            <star-rating
+              v-bind:star-size="15"
+              v-bind:increment="0.5"
+              :rating="product.rating"
+              :read-only="true"
+              :show-rating="false"
+            ></star-rating>
+            <p v-if="grid === 1" class="description">
+              {{ product.description }}
+            </p>
+            <p class="price">{{ product.price }}</p>
+          </div>
+          <actionBar />
+        </router-link>
       </div>
     </div>
   </div>
@@ -79,12 +81,6 @@ const limitedProducts = computed(() => {
   right: 15px;
 }
 
-/* .action-bar {
-  top: 10%;
-  right: -23px;
-  transition: 0.3s;
-} */
-
 .store-product-card {
   background-color: white;
   border-radius: 10px;
@@ -93,6 +89,7 @@ const limitedProducts = computed(() => {
   padding: 15px;
   display: flex;
   flex-direction: column;
+  height: 100%; /* Ensure all cards have the same height */
 }
 
 .wishlist-icon {
@@ -103,17 +100,22 @@ const limitedProducts = computed(() => {
 .product-image {
   text-align: center;
   margin-bottom: 10px;
+  height: 150px; /* Set a fixed height for the image container */
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .product-image img {
-  max-height: 150px;
+  max-height: 100%;
+  max-width: 100%;
   object-fit: contain;
 }
 
 .product-details {
-  flex-grow: 1;
   display: flex;
   flex-direction: column;
+  flex-grow: 1;
 }
 
 .product-details h6.brand {
@@ -127,11 +129,20 @@ const limitedProducts = computed(() => {
   color: var(--color-1c1c1b);
   margin-bottom: 10px;
   flex-grow: 1;
+  display: -webkit-box;
+  -webkit-line-clamp: 3; /* Limit to 2 lines */
+  -webkit-box-orient: vertical;
+  overflow: hidden;
+  height: 60px; /* Set a fixed height for 2 lines of text */
 }
 
 .product-details p.description {
   font-size: 14px;
   color: #666;
+  margin-bottom: 10px;
+}
+
+.product-details .star-rating {
   margin-bottom: 10px;
 }
 

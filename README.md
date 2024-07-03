@@ -32,4 +32,7 @@ yarn build
 
 ```sh
 yarn lint
+
+
 ```
+<!-- Rem to thank Bestbuy, Amazon for their images -->

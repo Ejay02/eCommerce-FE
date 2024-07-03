@@ -10,15 +10,19 @@
     <div class="container-xxl">
       <div class="row">
         <div class="col-12">
-          <iframe
-            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317719.601511855!2d-0.43193464729125997!3d51.5281778231739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1719487383009!5m2!1sen!2suk"
-            width="600"
-            height="450"
-            style="border: 0; border-radius: 10px; width: 100%"
-            allowfullscreen=""
-            loading="lazy"
-            referrerpolicy="no-referrer-when-downgrade"
-          ></iframe>
+          <div class="map-container">
+            <div v-if="!iframeLoaded" class="skeleton-loader"></div>
+            <iframe
+              @load="onIframeLoad"
+              src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d317719.601511855!2d-0.43193464729125997!3d51.5281778231739!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x47d8a00baf21de75%3A0x52963a5addd52a99!2sLondon!5e0!3m2!1sen!2suk!4v1719487383009!5m2!1sen!2suk"
+              width="600"
+              height="450"
+              style="border: 0; border-radius: 10px; width: 100%"
+              allowfullscreen=""
+              loading="lazy"
+              referrerpolicy="no-referrer-when-downgrade"
+            ></iframe>
+          </div>
         </div>
         <div class="col-12 mt-5">
           <div class="contact-inner-wrapper d-flex justify-content-between">
@@ -78,13 +82,13 @@
                   </li>
                   <li class="mb-3 d-flex gap-15 align-items-center">
                     <i class="fa-solid fa-envelope"></i>
-                    <a href="mailto:dreamydamsel2000@yahoo.com" class=""
-                      >dreamydamsel2000@yahoo.com</a
+                    <a href="mailto:e.jae02@gmail.com" class=""
+                      >e.jae02@gmail.com</a
                     >
                   </li>
                   <li class="mb-3 d-flex gap-15 align-items-center">
                     <i class="fa-solid fa-info"></i>
-                    <p class="mb-0">Monday - Friday 10AM - 8PM</p>
+                    <p class="mb-0">Monday - Friday 10AM - 5PM</p>
                   </li>
                 </ul>
               </div>
@@ -99,6 +103,40 @@
 <script setup>
 import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
+import { ref } from "vue";
+
+const iframeLoaded = ref(false);
+
+const onIframeLoad = () => {
+  iframeLoaded.value = true;
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.map-container {
+  position: relative;
+  width: 100%;
+  height: 450px;
+}
+
+.skeleton-loader {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(90deg, #d0d0d0 25%, #b0b0b0 50%, #d0d0d0 75%);
+  background-size: 200% 100%;
+  animation: loading 3s infinite;
+  border-radius: 10px;
+}
+
+@keyframes loading {
+  0% {
+    background-position: 200% 0;
+  }
+  100% {
+    background-position: -200% 0;
+  }
+}
+</style>

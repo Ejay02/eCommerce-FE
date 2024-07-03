@@ -16,6 +16,7 @@
     "swiper": "^11.1.4",
     "unhead": "^1.9.14",
     "vue": "^3.4.29",
+    "vue-image-zoomer": "^2.4.0",
     "vue-router": "4",
     "vue-star-rating": "^2.1.0",
     "vue3-marquee-slider": "^1.0.5"

@@ -242,7 +242,6 @@
               <storeProductCard :grid="grid" />
             </div>
           </div>
-          <!-- <productCard :limit="2" :grid="grid" /> -->
         </div>
       </div>
     </div>

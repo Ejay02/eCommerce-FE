@@ -59,7 +59,7 @@
               ></a>
 
               <a
-                href="mailto:dreamydamsel2000@yahoo.com"
+                href="mailto:e.jae02@gmail.com"
                 class="text-white fs-5"
                 ><i class="fa-solid fa-paper-plane"></i
               ></a>
@@ -84,7 +84,7 @@
             <router-link to="/shipping-policy" class="text-white py-2 mb-1"
               >Shipping Policy</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/terms-of-service" class="text-white py-2 mb-1"
               >Terms Of Service</router-link
             >
             <router-link to="/blogs" class="text-white py-2 mb-1"

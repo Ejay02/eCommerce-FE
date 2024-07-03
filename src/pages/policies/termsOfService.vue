@@ -1,10 +1,11 @@
 <template>
   <Metadata
-  title="BuyZone | Refund Policy"
-  description="Learn about BuyZone's refund policy, including eligibility, process, and timeframes for returns and refunds."
-  canonicalSuffix="/refund-policy"
+    title="BuyZone | Terms of Service"
+    description="Review BuyZone's terms of service to understand the rules and regulations for using our website and services."
+    canonicalSuffix="/terms-of-service"
   />
-  <Breadcrumb title="Refund" />
+  <Breadcrumb title="Terms Of Service" />
+
   <section class="policy-wrapper py-5 home-wrapper-2">
     <div class="container-xxl">
       <div class="row">

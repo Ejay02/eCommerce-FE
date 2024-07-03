@@ -5,6 +5,15 @@
     canonicalSuffix="/privacy-policy"
   />
   <Breadcrumb title="Privacy" />
+  <section class="policy-wrapper py-5 home-wrapper-2">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div class="policy"></div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script setup>

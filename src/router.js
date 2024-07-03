@@ -10,13 +10,15 @@ import Wishlist from "./pages/wishlist.vue";
 import SignUp from "./pages/auth/signup.vue";
 import Layout from "./components/layout.vue";
 import BlogView from "./pages/blog/blogView.vue";
-import Compare from "./pages/compareProducts.vue";
+import Compare from "./pages/products/compareProducts.vue";
 import NotFound from "./components/error/notFound.vue";
 import ForgotPassword from "./pages/auth/forgotPassword.vue";
 import ResetPassword from "./pages/auth/resetPassword.vue";
 import PrivacyPolicy from "./pages/policies/privacyPolicy.vue";
 import RefundPolicy from "./pages/policies/refundPolicy.vue";
 import ShippingPolicy from "./pages/policies/shippingPolicy.vue";
+import TermsOfService from "./pages/policies/termsOfService.vue";
+import Product from "./pages/products/product.vue";
 
 const routes = [
   {
@@ -79,6 +81,14 @@ const routes = [
       {
         path: "shipping-policy",
         component: ShippingPolicy,
+      },
+      {
+        path: "terms-of-service",
+        component: TermsOfService,
+      },
+      {
+        path: "product/:id",
+        component: Product,
       },
     ],
   },

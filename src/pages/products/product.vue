@@ -157,9 +157,21 @@
                   </a>
                 </div>
               </div>
+              <div class="mt-3">
+
+                <Accordion/>
+              </div>
+            </div>
+            <div class="d-flex gap-10 align-items-center my-2">
+              
+              <a href="" @click="copy" @click.prevent><i class="me-2 fa-solid fa-link"></i></a>
+              <h3 class="product-heading" style="font-size:14px">Share</h3>
+             
             </div>
           </div>
         </div>
+
+        
       </div>
     </div>
   </div>
@@ -179,6 +191,7 @@
       </div>
     </div>
   </section>
+
   <!-- reviews -->
   <section id="review" class="reviews-wrapper home-wrapper-2">
     <div class="container-xxl">
@@ -279,7 +292,7 @@
                  <span class="fs-6 fst-italic text-secondary">
                    on 
                  </span> 
-                  <h6 class="mb-0">24 March, 2024</h6>
+                  <h6 class="mb-0">{{reviewer.date}}</h6>
                 </div>
                 <p class="mt-3">
                   {{ reviewer.comment }}
@@ -298,6 +311,8 @@
       <PopularProductCard text="You May Also Like" />
     </div>
   </section>
+
+
 </template>
 
 <script setup>
@@ -309,12 +324,21 @@ import StarRating from "vue-star-rating";
 import "vue-image-zoomer/dist/style.css";
 import Metadata from "@/components/metadata.vue";
 import { VueImageZoomer } from "vue-image-zoomer";
+import Accordion from "@/components/accordion.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
+import { useNotifications } from '@/composable/useGlobalAlert.js';
 import PopularProductCard from "@/components/cards/popularProductCard.vue";
 
 const orderedProduct = ref(true);
 
+const { notify } = useNotifications();
+
 const route = useRoute();
+const baseUrl =  window.location.hostname === 'localhost' 
+    ? 'http://localhost:5173'
+    : "https://buyzone-demo.netlify.app";
+
+const fullUrl = computed(() => `${baseUrl}/product/${productId.value}`);
 const productId = computed(() => route.params.id);
 
 const product = computed(() =>
@@ -329,6 +353,20 @@ const updatedAvailability = computed(() => {
     }
     return 0;
 });
+
+
+const copy = async () => {
+  try {
+    await navigator.clipboard.writeText(fullUrl.value);
+    notify('URL copied to clipboard', 'success');
+
+  } catch (err) {
+    notify('Failed to copy URL', 'error');
+  
+  }
+};
+
+
 </script>
 
 <style lang="scss" scoped></style>

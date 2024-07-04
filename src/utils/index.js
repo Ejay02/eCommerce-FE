@@ -52,7 +52,7 @@ export const products = [
       "/images/prod-1.jpg",
     ],
     sizes: ["One Size"],
-    colorCount: 4,
+    colorCount: 5,
     count: 125,
     shippingAndReturns: {
       shipping: "Free shipping on orders over $50",

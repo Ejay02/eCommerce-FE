@@ -1,0 +1,87 @@
+<template>
+  <Metadata
+    title="BuyZone | Cart"
+    description="View and manage the items in your shopping cart."
+    canonicalSuffix="/cart"
+  />
+
+  <Breadcrumb title="Your Cart" />
+
+  <section class="cart-wrapper home-wrapper-2 py-5">
+    <div class="container-xxl">
+      <div class="row">
+        <div class="col-12">
+          <div
+            class="cart-header py-3 d-flex justify-content-between align-items-center"
+          >
+            <h4 class="cart-col-1">Product</h4>
+            <h4 class="cart-col-2">Price</h4>
+            <h4 class="cart-col-3">Quantity</h4>
+            <h4 class="cart-col-4">Total</h4>
+          </div>
+          <div
+            class="cart-data py-3 mb-2 d-flex justify-content-between align-items-center"
+          >
+            <div class="cart-col-1 d-flex align-items-center gap-15">
+              <div class="w-25">
+                <img src="/images/prod-6666.jpg" class="img-fluid" />
+              </div>
+              <div class="w-75">
+                <p class="">bla bleg blop</p>
+                <p class="">Color :</p>
+                <p class="">Size :</p>
+              </div>
+            </div>
+            <div class="cart-col-2">
+              <h5 class="price">$100</h5>
+            </div>
+            <div class="cart-col-3 d-flex align-items-center gap-15">
+              <div class="">
+                <input
+                  type="number"
+                  name=""
+                  id=""
+                  class="form-control"
+                  min="1"
+                />
+              </div>
+              <div class="">
+                <i class="fa-solid fa-trash-can text-danger p-3"></i>
+              </div>
+            </div>
+            <div class="cart-col-4">
+              <h5 class="price">$100</h5>
+            </div>
+          </div>
+        </div>
+        <div class="col-12 py-2 mt-4">
+          <router-link to="/store" class="button"
+            >Continue Shopping</router-link
+          >
+        </div>
+        <div
+          class="cart-bottom col-12 mt-4 d-flex justify-content-between align-items-baseline py-3"
+        >
+       
+          <div class="">
+            <h4 class="">Other special instructions</h4>
+            <textarea rows="4" />
+          </div>
+          <div class="d-flex align-items-end flex-column">
+            <p class="">Subtotal: $ 100</p>
+            <p class="">Taxes and shipping calculated at checkout</p>
+            <router-link to="/checkout" class="button">Check Out</router-link>
+          </div>
+        
+        </div>
+      </div>
+    </div>
+  </section>
+</template>
+
+<script setup>
+import Metadata from "@/components/metadata.vue";
+import Breadcrumb from "@/components/breadcrumb.vue";
+</script>
+
+<style scoped></style>

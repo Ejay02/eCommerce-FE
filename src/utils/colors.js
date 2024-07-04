@@ -1,8 +1,9 @@
 export const colors = [
   "#000000", // Black
   "#808080", // Gray
-  "#FFB6C1", // Light Pink
   "#C0C0C0", // Silver
+  "#87CEEB", //sky blue
+  "#FFB6C1", // Light Pink
   "#00FF00", // Green
   "#FF0000", // Red
   "#0000FF", // Blue

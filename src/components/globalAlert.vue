@@ -1,6 +1,11 @@
 <template>
   <transition name="fade">
-    <div v-if="show" :class="['notification', type]">
+    <div
+      v-if="show"
+      :class="['notification', type]"
+      class="alert alert-primary d-flex align-items-center gap-2"
+    >
+      <i class="fa-solid fa-circle-info"></i>
       {{ message }}
     </div>
   </transition>

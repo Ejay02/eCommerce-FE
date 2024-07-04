@@ -28,7 +28,7 @@
               :read-only="true"
               :show-rating="false"
             ></star-rating>
-            <p class="price">{{ product.price }}</p>
+            <p class="price">$ {{ product.price }}</p>
           </div>
           <actionBar />
         </div>

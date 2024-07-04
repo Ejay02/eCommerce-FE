@@ -18,7 +18,7 @@ export const products = [
     rating: 4.8,
     description:
       "The AirPods Max bring the magic of AirPods to a stunning over-ear design with high-fidelity audio, Active Noise Cancellation, and spatial audio. Experience the ultimate personal listening experience with custom-built drivers that deliver deep bass, accurate mids, and crisp highs. The breathable knit mesh canopy and memory foam ear cushions provide an exceptional fit for all-day comfort. Advanced software tailors the sound to the geometry of your ear for a rich, consistent listening experience. With up to 20 hours of high-fidelity audio, talk time, or movie playback, you'll never be without your favorite sounds.",
-    price: "$ 529.99",
+    price: "529.99",
     link: "/product-1",
     categories: ["Electronics", "Apple Products", "Gadgets", "Lifestyle"],
     tags: [
@@ -71,7 +71,7 @@ export const products = [
     rating: 4.5,
     description:
       "Celebrate the holidays with the adorable Squishmallows Holiday Cat. This 16-inch plush toy is perfect for cuddling and brings festive cheer with its cute blue scarf. Made with soft, high-quality materials, it's a great gift for kids and collectors alike. The Squishmallows Holiday Cat is incredibly soft and squeezable, providing a delightful tactile experience. It's durable enough for playtime, yet gentle enough to be a bedtime companion. Add this charming plush to your collection and spread some holiday joy.",
-    price: "$ 24.99",
+    price: "24.99",
     link: "/product-2",
     categories: ["Toys & Games", "Holiday", "Gifts"],
     tags: ["Squishmallows", "Plush Toy", "Holiday", "Cat", "Blue Scarf"],
@@ -120,7 +120,7 @@ export const products = [
     rating: 3.5,
     description:
       "The Sonos Move 2 is the durable, battery-powered smart speaker for outdoor and indoor listening. With Wi-Fi and Bluetooth connectivity, it provides brilliant sound anywhere. Enjoy deep bass, a wide soundscape, and automatic Trueplay tuning that adjusts the sound for the space you're in. The Move 2's weather-resistant design and long-lasting battery make it perfect for outdoor adventures, while its rich, powerful sound fills any room when you're at home. Stream music, radio, audiobooks, and more from your favorite services, and control it all with your voice, the Sonos app, and Apple AirPlay 2.",
-    price: "$ 449.00",
+    price: "449.00",
     link: "/product-3",
     categories: ["Electronics", "Audio Devices", "Portable Speakers"],
     tags: ["Sonos", "Move 2", "Smart Speaker", "Bluetooth", "Portable"],
@@ -168,7 +168,7 @@ export const products = [
     rating: 3,
     description:
       "Stay cool with the PELONIS 42-Inch Tower Fan. This standing fan features three speed settings, oscillation, and a convenient remote control. Its sleek, space-saving design fits perfectly in any room while providing powerful and quiet airflow for a comfortable environment. The fan's wide-angle oscillation ensures even air distribution, while the timer function allows you to set it to turn off automatically after a specified period. The easy-to-use control panel and remote control offer convenient operation, making this fan a great addition to your home or office.",
-    price: "$ 79.99",
+    price: "79.99",
     link: "/product-4",
     categories: ["Home Appliances", "Cooling Devices", "Fans"],
     tags: ["PELONIS", "Tower Fan", "Standing Fan", "Remote Control", "Cooling"],
@@ -216,7 +216,7 @@ export const products = [
     rating: 4.5,
     description:
       "The PlayStation 5 DualSense Wireless Controller offers immersive haptic feedback, dynamic adaptive triggers, and a built-in microphone, all integrated into an iconic comfortable design. Elevate your gaming experience with intuitive control and a deep sense of connectivity. The DualSense controller also features a built-in rechargeable battery, a strong, durable build, and an ergonomic grip for long gaming sessions. Compatible with a variety of PlayStation 5 games, this controller provides a truly immersive experience with its responsive triggers and detailed haptic feedback.",
-    price: "$ 69.00",
+    price: "69.00",
     link: "/product-5",
     categories: ["Electronics", "Gaming", "Accessories"],
     tags: [
@@ -270,7 +270,7 @@ export const products = [
     rating: 4.4,
     description:
       "The Samsung Galaxy Watch6 is your perfect health and fitness companion. Track your workouts, heart rate, and sleep patterns with this sleek and stylish smartwatch. With a bright display and long battery life, stay connected and in control all day long. The Galaxy Watch6 offers advanced health monitoring features, including ECG and blood oxygen levels, as well as a variety of fitness tracking options. Its durable, water-resistant design makes it ideal for all-day wear, whether you're at the gym, at work, or out on the town. Stay in touch with notifications, calls, and messages right from your wrist.",
-    price: "$ 209",
+    price: "209",
     link: "/product-6",
     categories: ["Electronics", "Wearable Technology", "Smartwatches"],
     tags: [

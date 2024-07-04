@@ -140,7 +140,7 @@
                 >
                </div>
                <div class="d-flex align-items-center gap-30 ms-5">
-                <button class="button border-0">Add to Cart</button>
+                <button class="button border-0" @click="addToCart">Add to Cart</button>
                   <button class="button signup"
                     >Buy Now</button
                   >
@@ -170,8 +170,6 @@
             </div>
           </div>
         </div>
-
-        
       </div>
     </div>
   </div>
@@ -323,6 +321,7 @@ import { products } from "@/utils/index";
 import StarRating from "vue-star-rating";
 import "vue-image-zoomer/dist/style.css";
 import Metadata from "@/components/metadata.vue";
+import { useCartStore } from '@/store/cartStore'; 
 import { VueImageZoomer } from "vue-image-zoomer";
 import Accordion from "@/components/accordion.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
@@ -332,6 +331,8 @@ import PopularProductCard from "@/components/cards/popularProductCard.vue";
 const orderedProduct = ref(true);
 
 const { notify } = useNotifications();
+
+const cartStore = useCartStore(); 
 
 const route = useRoute();
 const baseUrl =  window.location.hostname === 'localhost' 
@@ -345,7 +346,7 @@ const product = computed(() =>
   products.find((item) => item.id === parseInt(productId.value))
 );
 
-const quantity = ref(0); 
+const quantity = ref(1); 
 
 const updatedAvailability = computed(() => {
     if (product.value) {
@@ -366,7 +367,11 @@ const copy = async () => {
   }
 };
 
-
+const addToCart = () => {
+  console.log(product.value)
+  cartStore.addToCart(product.value, quantity.value);
+  notify('Product added to cart', 'success');
+};
 </script>
 
 <style lang="scss" scoped></style>

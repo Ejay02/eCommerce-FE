@@ -79,8 +79,10 @@
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/cart.svg" alt="cart" />
                 <div class="d-flex flex-column gap-10">
-                  <span class="badge bg-white text-dark">0</span>
-                  <p class="mb-0">$ 0.00</p>
+                  <span class="badge bg-white text-dark">{{
+                    cartStore.cartItemCount
+                  }}</span>
+                  <p class="mb-0">$ {{ cartStore.cartTotal.toFixed(2) }}</p>
                 </div>
               </router-link>
             </div>
@@ -141,6 +143,10 @@
   </header>
 </template>
 
-<script setup></script>
+<script setup>
+import { useCartStore } from "@/store/cartStore";
+
+const cartStore = useCartStore();
+</script>
 
 <style lang="scss" scoped></style>

@@ -75,7 +75,7 @@
             </div>
             <div>
               <router-link
-                to=""
+                to="/cart"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/cart.svg" alt="cart" />
                 <div class="d-flex flex-column gap-10">

@@ -234,7 +234,7 @@
                 </div>
                 <div>
                   <input
-                    autofocus
+                  
                     type="email"
                     class="form-control"
                     placeholder="janeSmith@example.com"
@@ -251,7 +251,7 @@
 
                 <div>
                   <input
-                    autofocus
+                  
                     type="text"
                     class="form-control"
                     placeholder="Give your review a title"

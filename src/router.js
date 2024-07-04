@@ -1,24 +1,25 @@
 import { createRouter, createWebHistory } from "vue-router";
 
 import Home from "./pages/home.vue";
-import Blogs from "./pages/blog/blogs.vue";
+import Cart from "./pages/cart.vue";
 import About from "./pages/about.vue";
 import Store from "./pages/store.vue";
 import Contact from "./pages/contact.vue";
 import Login from "./pages/auth/login.vue";
+import Blogs from "./pages/blog/blogs.vue";
 import Wishlist from "./pages/wishlist.vue";
 import SignUp from "./pages/auth/signup.vue";
 import Layout from "./components/layout.vue";
 import BlogView from "./pages/blog/blogView.vue";
-import Compare from "./pages/products/compareProducts.vue";
+import Product from "./pages/products/product.vue";
 import NotFound from "./components/error/notFound.vue";
-import ForgotPassword from "./pages/auth/forgotPassword.vue";
 import ResetPassword from "./pages/auth/resetPassword.vue";
-import PrivacyPolicy from "./pages/policies/privacyPolicy.vue";
+import Compare from "./pages/products/compareProducts.vue";
+import ForgotPassword from "./pages/auth/forgotPassword.vue";
 import RefundPolicy from "./pages/policies/refundPolicy.vue";
+import PrivacyPolicy from "./pages/policies/privacyPolicy.vue";
 import ShippingPolicy from "./pages/policies/shippingPolicy.vue";
 import TermsOfService from "./pages/policies/termsOfService.vue";
-import Product from "./pages/products/product.vue";
 
 const routes = [
   {
@@ -69,6 +70,10 @@ const routes = [
       {
         path: "account/reset-password",
         component: ResetPassword,
+      },
+      {
+        path: "cart",
+        component: Cart,
       },
       {
         path: "privacy-policy",

@@ -25,12 +25,12 @@ export const useCartStore = defineStore("cart", {
       }
     },
 
-    addToCart(product, quantity) {
+    addToCart(product, quantity, selectedSize, selectedColor) {
       const existingItem = this.items.find((item) => item.id === product.id);
       if (existingItem) {
         existingItem.quantity += quantity;
       } else {
-        this.items.push({ ...product, quantity });
+        this.items.push({ ...product, quantity, selectedSize, selectedColor });
       }
       this.saveCart();
     },

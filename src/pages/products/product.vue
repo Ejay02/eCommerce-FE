@@ -102,8 +102,12 @@
               </div>
               <div class="d-flex gap-10 flex-column mt-2 mb-3">
                 <h3 class="prod-head">Size :</h3>
-                <div class="d-flex flex-wrap gap-15" v-for="(size, index) in product.sizes" :key="index">
-                  <button class="badge border border-1  bg-white text-dark border-secondary pointer">
+                <div 
+                class="d-flex flex-wrap gap-15" v-for="(size, index) in product.sizes" 
+                :key="index"
+                >
+                  <button class="badge border border-1  bg-white text-dark border-secondary pointer" :class="{ 'active': selectedSize === size }"
+                  @click="selectSize(size)">
                     {{ size }}
                   </button>
                 </div>
@@ -120,6 +124,8 @@
                       )"
                       :key="colorIndex"
                       :style="{ backgroundColor: color }"
+                      :class="{ 'active': selectedColor === color }"
+                      @click="selectColor(color)"
                     ></li>
                   </ul>
 
@@ -347,6 +353,9 @@ const product = computed(() =>
 );
 
 const quantity = ref(1); 
+const selectedSize = ref(null);
+const selectedColor = ref(null);
+
 
 const updatedAvailability = computed(() => {
     if (product.value) {
@@ -368,10 +377,35 @@ const copy = async () => {
 };
 
 const addToCart = () => {
-  console.log(product.value)
-  cartStore.addToCart(product.value, quantity.value);
+  cartStore.addToCart(product.value, quantity.value, selectedSize.value, selectedColor.value );
   notify('Product added to cart', 'success');
+};
+
+
+
+const selectSize = (size) => {
+  selectedSize.value = size;
+};
+
+const selectColor = (color) => {
+  selectedColor.value = color;
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.badge.active {
+  background-color: #febd69 !important;
+  color: white !important;
+}
+
+.colors li {
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  cursor: pointer;
+}
+
+.colors li.active {
+  border: 2px solid #febd69;
+}
+</style>

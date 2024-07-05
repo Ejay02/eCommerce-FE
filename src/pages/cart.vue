@@ -49,8 +49,8 @@
               </div>
               <div class="w-75">
                 <p>{{ item.title }}</p>
-                <p>Color : {{ item.color }}</p>
-                <p>Size : {{ item.size }}</p>
+                <p>Color : {{ item.selectedColor }}</p>
+                <p>Size : {{ item.selectedSize }}</p>
               </div>
             </div>
             <div class="cart-col-2">

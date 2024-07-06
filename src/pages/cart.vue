@@ -88,7 +88,7 @@
         >
           <div class="">
             <h4 class="">Other special instructions</h4>
-            <textarea rows="4" />
+            <textarea rows="4"    class="w-100 form-control"/>
           </div>
           <div class="d-flex align-items-end flex-column">
             <p>Subtotal: ${{ cartStore.cartTotal }}</p>

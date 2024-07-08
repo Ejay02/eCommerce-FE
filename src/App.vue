@@ -1,10 +1,12 @@
 <template>
   <router-view />
+  <ScrollToTopButton />
 </template>
 
 <script setup>
 import { onMounted } from "vue";
 import { useCartStore } from "@/store/cartStore";
+import ScrollToTopButton from "@/components/scrollToTopButton.vue";
 
 const cartStore = useCartStore();
 
@@ -13,4 +15,4 @@ onMounted(() => {
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

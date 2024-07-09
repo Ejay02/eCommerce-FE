@@ -25,10 +25,8 @@
             <p class="mb-0 px-1"><b>5 </b> Days</p>
 
             <div class="d-flex align-items-center">
-              <span class="badge rounded-circle bg-danger">05</span>&nbsp;
-              :&nbsp;
-              <span class="badge rounded-circle bg-danger">02</span>&nbsp;
-              :&nbsp;
+              <span class="badge rounded-circle bg-danger">05</span>&nbsp;:&nbsp;
+              <span class="badge rounded-circle bg-danger">02</span>&nbsp;:&nbsp;
               <span class="badge rounded-circle bg-danger">00</span>
             </div>
           </div>

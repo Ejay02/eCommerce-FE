@@ -41,7 +41,7 @@ const blogs = [
     title: "Launching Our New eCommerce Website",
     description:
       "Explore the exciting features of our brand-new eCommerce platform. Enjoy a seamless shopping experience with ...",
-      // with fast delivery, secure payments, and exceptional customer service
+    // with fast delivery, secure payments, and exceptional customer service
     link: "/blog-1",
   },
   {

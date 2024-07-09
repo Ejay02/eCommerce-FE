@@ -1,5 +1,5 @@
 <template>
-  <button v-if="isVisible" class="scroll-to-top button" @click="scrollToTop">
+  <button v-if="isVisible" class="scroll-to-top " @click="scrollToTop">
     <i class="fa fa-chevron-up"></i>
   </button>
 </template>
@@ -39,6 +39,7 @@ onUnmounted(() => {
   justify-content: center;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   transition: opacity 0.3s ease;
+  background-color: var(--color-febd69);
   /* opacity: 0.7; */
 }
 

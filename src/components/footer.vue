@@ -96,10 +96,10 @@
           <h4 class="text-white mb-4">Account</h4>
           <div class="footer-link d-flex flex-column">
             <router-link to="" class="text-white py-2 mb-1">Search</router-link>
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/about" class="text-white py-2 mb-1"
               >About Us</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1">FAQs</router-link>
+            <router-link to="faq" class="text-white py-2 mb-1">FAQs</router-link>
             <router-link to="/contact" class="text-white py-2 mb-1"
               >Contact</router-link
             >

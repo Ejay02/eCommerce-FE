@@ -40,7 +40,7 @@
             <p v-if="grid === 1" class="description">
               {{ product.description }}
             </p>
-            <p class="price">{{ product.price }}</p>
+            <p class="price">$ {{ product.price }}</p>
           </div>
           <actionBar />
         </router-link>

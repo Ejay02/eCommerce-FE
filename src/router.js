@@ -5,6 +5,7 @@ import Cart from "./pages/cart.vue";
 import About from "./pages/about.vue";
 import Store from "./pages/store.vue";
 import Contact from "./pages/contact.vue";
+import FAQ from "./pages/faq.vue";
 import Login from "./pages/auth/login.vue";
 import Blogs from "./pages/blog/blogs.vue";
 import Wishlist from "./pages/wishlist.vue";
@@ -33,6 +34,10 @@ const routes = [
       {
         path: "about",
         component: About,
+      },
+      {
+        path: "faq",
+        component: FAQ,
       },
       {
         path: "contact",

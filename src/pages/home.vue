@@ -108,43 +108,15 @@
           <div
             class="services d-flex align-items-center justify-content-between"
           >
-            <div class="d-flex align-items-center gap-15">
-              <img src="/images/service.png" alt="services" />
+            <div
+              class="d-flex align-items-center gap-15"
+              v-for="(data, index) in servicesData"
+              :key="index"
+            >
+              <img :src="data.image" alt="services" />
               <div>
-                <h6>Free Shipping</h6>
-                <p class="mb-0">From all orders over $100</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-15">
-              <img src="/images/service-02.png" alt="services" />
-              <div>
-                <h6>Daily Surprise Offers</h6>
-                <p class="mb-0">Save up to 25% off</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-15">
-              <img src="/images/service-03.png" alt="services" />
-              <div>
-                <h6>Support 24/7</h6>
-                <p class="mb-0">Shop with an expert</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-15">
-              <img src="/images/service-04.png" alt="services" />
-              <div>
-                <h6>Affordable Prices</h6>
-                <p class="mb-0">Get factory default price</p>
-              </div>
-            </div>
-
-            <div class="d-flex align-items-center gap-15">
-              <img src="/images/service-05.png" alt="services" />
-              <div>
-                <h6>Secure Payments</h6>
-                <p class="mb-0">100% Protected Payments</p>
+                <h6>{{ data.title }}</h6>
+                <p class="mb-0">{{ data.description }}</p>
               </div>
             </div>
           </div>
@@ -161,85 +133,16 @@
           <div
             class="categories d-flex justify-content-between flex-wrap align-items-center"
           >
-            <div class="d-flex gap align-items-center">
+            <div
+              class="d-flex gap align-items-center p-2"
+              v-for="(data, index) in categoriesData"
+              :key="index"
+            >
               <div>
-                <h6>Computers & Laptop</h6>
-                <p>8 Items</p>
+                <h6>{{ data.title }}</h6>
+                <p>{{ data.count }}Items</p>
               </div>
-              <img src="/images/laptop.jpg" alt="laptop" />
-            </div>
-            <div class="d-flex gap align-items-center p-2">
-              <div>
-                <h6>Cameras & Videos</h6>
-                <p>10 Items</p>
-              </div>
-              <img src="/images/camera.jpg" alt="camera" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Smart Tvs</h6>
-                <p>12 Items</p>
-              </div>
-              <img src="/images/tv.jpg" alt="tv" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Smart Watches</h6>
-                <p>13 Items</p>
-              </div>
-              <img src="/images/watch.jpg" alt="watch" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Music & Gaming</h6>
-                <p>4 Items</p>
-              </div>
-              <img
-                src="/images/ps5.jpg"
-                alt="ps5"
-                class="bg-white"
-                style="width: 119px; height: 95px"
-              />
-            </div>
-            <!--  -->
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Mobiles & Tablets</h6>
-                <p>5 Items</p>
-              </div>
-              <img src="/images/phone.jpg" alt="laptop" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Headphones</h6>
-                <p>6 Items</p>
-              </div>
-              <img src="/images/headphone.jpg" alt="headphone" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Accessories</h6>
-                <p>10 Items</p>
-              </div>
-              <img src="/images/acc.jpg" alt="accessories" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Portable Speakers</h6>
-                <p>8 Items</p>
-              </div>
-              <img src="/images/speaker.jpg" alt="speaker" />
-            </div>
-            <div class="d-flex gap align-items-center">
-              <div>
-                <h6>Home Appliances</h6>
-                <p>6 Items</p>
-              </div>
-              <img
-                src="/images/homeapp.jpg"
-                alt="home appliance"
-                class="bg-white"
-              />
+              <img :src="data.image" :alt="data.alt" class="img-fluid" />
             </div>
           </div>
         </div>
@@ -295,14 +198,9 @@
           <div class="marquee-inner-wrapper card-wrapper">
             <vue-marquee-slider :speed="15000" reverse id="marquee-slider">
               <div class="mx-4 w-25"></div>
-              <img src="/images/brand-01.png" alt="apple logo" />
-              <img src="/images/brand-02.png" alt="bose logo" />
-              <img src="/images/brand-03.png" alt="canon logo" />
-              <img src="/images/brand-04.png" alt="dell logo" />
-              <img src="/images/brand-05.png" alt="intel logo" />
-              <img src="/images/brand-06.png" alt="lg logo" />
-              <img src="/images/brand-07.png" alt="samsung logo" />
-              <img src="/images/brand-08.png" alt="scan disk logo" />
+              <div class="" v-for="(data, index) in brandData" :key="index">
+                <img :src="data.src" :alt="data.alt" />
+              </div>
             </vue-marquee-slider>
           </div>
         </div>
@@ -330,6 +228,7 @@ import blogCard from "../components/cards/blogCard.vue";
 import FamousCard from "../components/cards/famousCard.vue";
 import ProductCard from "@/components/cards/productCard.vue";
 import "../../node_modules/vue3-marquee-slider/dist/style.css";
+import { servicesData, categoriesData, brandData } from "@/utils/index";
 import PopularProductCard from "@/components/cards/popularProductCard.vue";
 import SpecialProductCard from "../components/cards/specialProductCard.vue";
 </script>

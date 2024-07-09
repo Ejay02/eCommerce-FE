@@ -317,3 +317,106 @@ export const products = [
       "Wipe with a soft, dry cloth. Avoid exposure to moisture and extreme temperatures.",
   },
 ];
+
+export const servicesData = [
+  {
+    image: "/images/service.png",
+    title: "Free Shipping",
+    description: "From all orders over $ 100",
+  },
+  {
+    image: "/images/service-02.png",
+    title: "Daily Surprise Offers",
+    description: "Save up to 25% off",
+  },
+  {
+    image: "/images/service-03.png",
+    title: "Support 24/7",
+    description: "Shop with an expert",
+  },
+  {
+    image: "/images/service-04.png",
+    title: "Affordable Prices",
+    description: "Get factory default price",
+  },
+  {
+    image: "/images/service-05.png",
+    title: "Secure Payments",
+    description: "100% Protected Payments",
+  },
+];
+
+export const categoriesData = [
+  {
+    title: "Computers & Laptop",
+    count: "8",
+    image: "/images/laptop.jpg",
+    alt: "laptop",
+  },
+  {
+    title: "Cameras & Videos",
+    count: "10",
+    image: "/images/camera.jpg",
+    alt: "camera",
+  },
+  {
+    title: "Smart Tvs",
+    count: "12",
+    image: "/images/tv.jpg",
+    alt: "tv",
+  },
+  {
+    title: "Smart Watches",
+    count: "18",
+    image: "/images/watch.jpg",
+    alt: "watch",
+  },
+
+  {
+    title: "Mobiles & Tablets",
+    count: "5",
+    image: "/images/phone.jpg",
+    alt: "phone",
+  },
+  {
+    title: "Headphones",
+    count: "6",
+    image: "/images/headphone.jpg",
+    alt: "headphone",
+  },
+  {
+    title: "Accessories",
+    count: "10",
+    image: "/images/acc.jpg",
+    alt: "accessories",
+  },
+  {
+    title: "Portable Speakers",
+    count: "8",
+    image: "/images/speaker.jpg",
+    alt: "speaker",
+  },
+  {
+    title: "Home Appliances",
+    count: "6",
+    image: "/images/homeapp.jpg",
+    alt: "home appliance",
+  },
+  {
+    title: "Music & Gaming",
+    count: "8",
+    image: "/images/ps5.jpg",
+    alt: "ps5",
+  },
+];
+
+export const brandData = [
+  { src: "/images/brand-01.png", alt: "apple logo" },
+  { src: "/images/brand-02.png", alt: "bose logo" },
+  { src: "/images/brand-03.png", alt: "canon logo" },
+  { src: "/images/brand-04.png", alt: "dell logo" },
+  { src: "/images/brand-05.png", alt: "intel logo" },
+  { src: "/images/brand-06.png", alt: "lg logo" },
+  { src: "/images/brand-07.png", alt: "samsung logo" },
+  { src: "/images/brand-08.png", alt: "scan disk logo" },
+];

@@ -350,7 +350,11 @@ footer .input-group-text {
 
 .single-blog-card p {
   color: var(--color-777777);
-  font-size: 14px;
+  font-size: 15px;
+  /* padding: 25px; */
+  margin-bottom: 10px;
+  padding-bottom: 10px;
+  line-height: 30px;
 }
 
 .single-blog-card a {
@@ -358,6 +362,7 @@ footer .input-group-text {
   color: var(--color-777777);
   margin-bottom: 20px;
 }
+
 /*======================
   Featured products
 =======================*/
@@ -872,6 +877,31 @@ footer .input-group-text {
 .policy {
   background-color: white;
   padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+.policy h1,
+.about h1 {
+  font-size: 2rem;
+  margin-bottom: 1rem;
+}
+
+.policy h2,
+.about h2 {
+  font-size: 1.5rem;
+  margin-top: 1.5rem;
+  margin-bottom: 0.75rem;
+}
+
+.policy p,
+.policy li,
+.about p,
+.about ul li {
+  font-size: 1rem;
+  line-height: 1.5;
+  margin-bottom: 1rem;
+  color: #777777;
 }
 
 /*======================

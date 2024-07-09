@@ -194,6 +194,12 @@ const blog = computed(() => blogs.find((b) => b.id === parseInt(blogId.value)));
 </script>
 
 <style scoped>
+.single-blog-card {
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
 .blog-image {
   /* width: 100px; */
   height: 200px;

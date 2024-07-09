@@ -76,7 +76,6 @@ const faqs = ref([
 }
 
 .faq-question {
-  font-weight: bold;
   margin-bottom: 10px;
 }
 

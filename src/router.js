@@ -11,6 +11,7 @@ import Blogs from "./pages/blog/blogs.vue";
 import Wishlist from "./pages/wishlist.vue";
 import SignUp from "./pages/auth/signup.vue";
 import Layout from "./components/layout.vue";
+import SizeChart from "./pages/sizeChart.vue";
 import BlogView from "./pages/blog/blogView.vue";
 import Product from "./pages/products/product.vue";
 import NotFound from "./components/error/notFound.vue";
@@ -36,8 +37,12 @@ const routes = [
         component: About,
       },
       {
-        path: "faq",
+        path: "faqs",
         component: FAQ,
+      },
+      {
+        path: "size-chart",
+        component: SizeChart,
       },
       {
         path: "contact",

@@ -197,10 +197,13 @@
         <div class="col-12">
           <div class="marquee-inner-wrapper card-wrapper">
             <vue-marquee-slider :speed="15000" reverse id="marquee-slider">
-              <div class="mx-4 w-25"></div>
-              <div class="" v-for="(data, index) in brandData" :key="index">
-                <img :src="data.src" :alt="data.alt" />
-              </div>
+              <div class="mx-4 w-15"></div>
+              <img
+                :src="data.src"
+                :alt="data.alt"
+                v-for="(data, index) in brandData"
+                :key="index"
+              />
             </vue-marquee-slider>
           </div>
         </div>
@@ -233,4 +236,4 @@ import PopularProductCard from "@/components/cards/popularProductCard.vue";
 import SpecialProductCard from "../components/cards/specialProductCard.vue";
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped></style>

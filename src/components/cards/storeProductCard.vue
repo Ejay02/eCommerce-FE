@@ -127,7 +127,7 @@ const limitedProducts = computed(() => {
 .product-details h5.product-title {
   font-size: 16px;
   color: var(--color-1c1c1b);
-  margin-bottom: 10px;
+  /* margin-bottom: 10px; */
   flex-grow: 1;
   display: -webkit-box;
   -webkit-line-clamp: 3; /* Limit to 2 lines */
@@ -138,7 +138,7 @@ const limitedProducts = computed(() => {
 
 .product-details p.description {
   font-size: 14px;
-  color: #666;
+  color: #777777;
   margin-bottom: 10px;
 }
 

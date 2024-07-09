@@ -41,6 +41,7 @@ const blogs = [
     title: "Launching Our New eCommerce Website",
     description:
       "Explore the exciting features of our brand-new eCommerce platform. Enjoy a seamless shopping experience with ...",
+      // with fast delivery, secure payments, and exceptional customer service
     link: "/blog-1",
   },
   {
@@ -49,8 +50,8 @@ const blogs = [
     date: "15 April, 2024",
     title: "Streamline Your Checkout Process",
     description:
-      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction and increase sales ...",
-    //with our tips.
+      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction and ...",
+    //increase sales  with our tips.
     link: "/blog-2",
   },
   {

@@ -99,11 +99,11 @@
             <router-link to="/about" class="text-white py-2 mb-1"
               >About Us</router-link
             >
-            <router-link to="faq" class="text-white py-2 mb-1">FAQs</router-link>
+            <router-link to="faqs" class="text-white py-2 mb-1">FAQs</router-link>
             <router-link to="/contact" class="text-white py-2 mb-1"
               >Contact</router-link
             >
-            <router-link to="" class="text-white py-2 mb-1"
+            <router-link to="/size-chart" class="text-white py-2 mb-1"
               >Size Chart</router-link
             >
           </div>

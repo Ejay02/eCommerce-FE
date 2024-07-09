@@ -86,8 +86,10 @@ const toySizes = ref([
 
 .size-chart-table th,
 .size-chart-table td {
+  color: #777;
   padding: 10px;
   text-align: left;
+  letter-spacing: 2px;
   border-bottom: 1px solid #ddd;
 }
 

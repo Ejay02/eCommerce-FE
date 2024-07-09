@@ -1,38 +1,50 @@
-# eCommerce-FE
+# BuyZone Frontend
 
-This template should help get you started developing with Vue 3 in Vite.
+Welcome to the BuyZone frontend project! This project is an online marketplace interface built with Vue.js, featuring a product catalog and other essential e-commerce functionalities.
 
-## Recommended IDE Setup
+## Overview
 
-[VSCode](https://code.visualstudio.com/) + [Volar](https://marketplace.visualstudio.com/items?itemName=Vue.volar) (and disable Vetur).
+BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The frontend is developed using Vue.js, leveraging various components to build a responsive and interactive user interface.
 
-## Customize configuration
+## Installation
 
-See [Vite Configuration Reference](https://vitejs.dev/config/).
+Follow these steps to set up the project locally:
 
-## Project Setup
+1. **Clone the repository:**
+    ```sh
+    git clone https://github.com/Ejay02/eCommerce-FE.git
+    cd into folder
+    ```
 
-```sh
-yarn
-```
+2. **Install dependencies:**
+    ```sh
+    yarn install
+    ```
 
-### Compile and Hot-Reload for Development
+3. **Run the development server:**
+    ```sh
+    yarn dev
+    ```
 
-```sh
-yarn dev
-```
+4. **Build for production:**
+    ```sh
+    yarn build
+    ```
 
-### Compile and Minify for Production
+5. **Run the production build:**
+    ```sh
+    yarn serve
+    ```
 
-```sh
-yarn build
-```
+## Demo
 
-### Lint with [ESLint](https://eslint.org/)
+Check out the live demo of the project at [BuyZone](https://buyzone-demo.netlify.app/).
 
-```sh
-yarn lint
+## Credits
 
+- Product images and descriptions are sourced from [Amazon](https://www.amazon.com/) and [Best Buy](https://www.bestbuy.com/).
+- This project uses the [Vue.js](https://vuejs.org/) framework.
 
-```
-<!-- Rem to thank Bestbuy, Amazon for their images -->
+## License
+
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

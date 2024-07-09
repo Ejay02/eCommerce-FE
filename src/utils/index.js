@@ -420,3 +420,33 @@ export const brandData = [
   { src: "/images/brand-07.png", alt: "samsung logo" },
   { src: "/images/brand-08.png", alt: "scan disk logo" },
 ];
+
+export const specProd = [
+  {
+    image: "/images/spec01.jpg",
+    brand: "Sony",
+    description:
+      "Play your PS5 console over your home Wi-Fi with console quality controls using PlayStation Portal Remote Player",
+    rating: 4.8,
+    price: "197",
+    count: 7,
+  },
+  {
+    image: "/images/spec02.jpg",
+    brand: "Eufy",
+    description:
+      "eufy L60 Robot Vacuum Cleaner, Ultra Strong 5,000 Pa Suction to Remove Hair, Dust, iPath Laser Navigation, For Deep Floor Cleaning, Ideal for Hard Floors",
+    rating: 4.4,
+    price: "199",
+    count: 4,
+  },
+  {
+    image: "/images/spec03.jpg",
+    brand: "Barbie",
+    description:
+      "Barbie Moped with Puppy!, FRP56",
+    rating: 4.7,
+    price: "17",
+    count: 14,
+  },
+];

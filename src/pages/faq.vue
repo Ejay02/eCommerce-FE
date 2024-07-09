@@ -62,16 +62,13 @@ const faqs = ref([
   },
 ]);
 </script>
+
 <style scoped>
 .faq {
   background-color: white;
   padding: 30px;
   border-radius: 8px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
-}
-
-.faq h2 {
-  margin-bottom: 20px;
 }
 
 .faq-item {
@@ -86,6 +83,5 @@ const faqs = ref([
 .faq-answer {
   margin-bottom: 0;
   color: #777;
-
 }
 </style>

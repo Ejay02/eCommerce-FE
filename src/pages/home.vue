@@ -181,8 +181,6 @@
       </div>
       <div class="row">
         <SpecialProductCard />
-        <SpecialProductCard />
-        <SpecialProductCard />
       </div>
     </div>
   </section>

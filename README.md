@@ -5,7 +5,7 @@ Welcome to the BuyZone frontend project! This project is an online marketplace i
 
 ## Overview
 
-BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The frontend is developed using Vue.js, leveraging various components to build a responsive and interactive user interface.
+BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The front end is developed using Vue.js, leveraging various components and libraries to build a responsive and interactive user interface.
 
 ## Installation
 

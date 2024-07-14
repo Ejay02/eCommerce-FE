@@ -2,7 +2,6 @@
 
 Welcome to the BuyZone frontend project! This project is an online marketplace interface built with Vue.js, featuring a product catalog and other essential e-commerce functionalities.
 
-
 ## Overview
 
 BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The front end is developed using Vue.js, leveraging various components and libraries to build a responsive and interactive user interface.
@@ -50,4 +49,14 @@ Check out the live demo of the project at [BuyZone](https://buyzone-demo.netlify
 
 This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
 
+## Contribution Guidelines
 
+We welcome contributions to BuyZone! To contribute, please follow these guidelines:
+- Fork the repository and create your branch from `master`.
+- Make sure your code follows our coding standards and conventions.
+- Test your changes thoroughly.
+- Submit a pull request detailing the changes you've made.
+
+## Admin Dashboard
+
+Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify.app/).

@@ -4,7 +4,7 @@ Welcome to the BuyZone front-end project! This project is an online marketplace 
 
 ## Overview
 
-BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The front end is developed using Vue.js, leveraging various components and libraries to build a responsive and interactive user interface.
+BuyZone is a mock e-commerce platform that provides users with a seamless shopping experience. The front end is developed using Vue.js, leveraging various components and libraries to build a responsive and interactive user interface. 
 
 ## Installation
 
@@ -36,9 +36,13 @@ Follow these steps to set up the project locally:
     yarn serve
     ```
 
-## Demo
+# Demo
 
 Check out the live demo of the project at [BuyZone](https://buyzone-demo.netlify.app/).
+
+### Admin Dashboard
+
+Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify.app/).
 
 ## Credits
 
@@ -57,6 +61,4 @@ We welcome contributions to BuyZone! To contribute, please follow these guidelin
 - Test your changes thoroughly.
 - Submit a pull request detailing the changes you've made.
 
-## Admin Dashboard
 
-Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify.app/).

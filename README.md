@@ -13,25 +13,29 @@ Follow these steps to set up the project locally:
 1. **Clone the repository:**
     ```sh
     git clone https://github.com/Ejay02/eCommerce-FE.git
-    cd into folder
     ```
 
-2. **Install dependencies:**
+2. Navigate to the project directory:
+   ```sh
+   cd into project
+   ```
+
+3. **Install dependencies:**
     ```sh
     yarn install
     ```
 
-3. **Run the development server:**
+4. **Run the development server:**
     ```sh
     yarn dev
     ```
 
-4. **Build for production:**
+5. **Build for production:**
     ```sh
     yarn build
     ```
 
-5. **Run the production build:**
+6. **Run the production build:**
     ```sh
     yarn serve
     ```
@@ -58,7 +62,7 @@ This project is licensed under the MIT License. See the [LICENSE](LICENSE) file 
 We welcome contributions to BuyZone! To contribute, please follow these guidelines:
 - Fork the repository and create your branch from `master`.
 - Make sure your code follows our coding standards and conventions.
-- Test your changes thoroughly.
+- Could you test your changes thoroughly?
 - Submit a pull request detailing the changes you've made.
 
 

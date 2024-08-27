@@ -1,8 +1,9 @@
 <template>
-  <div class="row">
+  <LoadingScreen v-if="blogStore?.loading" />
+  <div class="row" v-if="limitedBlogs?.length">
     <div
-      v-for="blog in blogs"
-      :key="blog.id"
+      v-for="blog in limitedBlogs"
+      :key="blog._id"
       :class="[isBigCard ? 'col-6' : 'col-3', 'mb-4']"
     >
       <div class="blog-card">
@@ -12,11 +13,14 @@
         <div class="blog-content">
           <p class="date">{{ blog.date }}</p>
           <h5 class="title text-truncate">{{ blog.title }}</h5>
-          <p class="desc" style="color: gray; font-size: small">
-            {{ blog.description }}
-          </p>
 
-          <router-link :to="`/blog/${blog.id}`" class="button"
+          <div
+            class="desc"
+            style="color: gray; font-size: small"
+            v-html="truncateDescription(markedDescription(blog?.description))"
+          ></div>
+
+          <router-link :to="`/blog/${blog._id}`" class="butn text-center"
             >Read More</router-link
           >
         </div>
@@ -26,53 +30,106 @@
 </template>
 
 <script setup>
-defineProps({
+import { useBlogStore } from "@/store/useBlogStore";
+import { computed, onMounted } from "vue";
+import { marked } from "marked";
+import { defineProps } from "vue";
+import LoadingScreen from "../loadingScreen.vue";
+
+const { isBigCard, blogCount } = defineProps({
   isBigCard: {
     type: Boolean,
     default: false,
   },
+  blogCount: {
+    type: Number,
+    default: Infinity,
+  },
 });
 
-const blogs = [
-  {
-    id: 1,
-    image: "/images/blog-1.jpg",
-    date: "1 March, 2024",
-    title: "Launching Our New eCommerce Website",
-    description:
-      "Explore the exciting features of our brand-new eCommerce platform. Enjoy a seamless shopping experience with ...",
-    // with fast delivery, secure payments, and exceptional customer service
-    link: "/blog-1",
-  },
-  {
-    id: 2,
-    image: "/images/blog-2.jpg",
-    date: "15 April, 2024",
-    title: "Streamline Your Checkout Process",
-    description:
-      "Simplify your checkout process to reduce cart abandonment. Improve customer satisfaction and ...",
-    //increase sales  with our tips.
-    link: "/blog-2",
-  },
-  {
-    id: 3,
-    image: "/images/blog-3.jpg",
-    date: "10 May, 2024",
-    title: "Top eCommerce Marketing Tips",
-    description:
-      "Learn the best marketing tactics for your eCommerce business. Boost your reach and engagement with our expert advice.",
-    link: "/blog-3",
-  },
-  {
-    id: 4,
-    image: "/images/blog-4.jpg",
-    date: "18 June, 2024",
-    title: "Creating Engaging Product Listings",
-    description:
-      "Craft compelling product listings that convert. Enhance your descriptions and images to attract and retain customers.",
-    link: "/blog-4",
-  },
-];
+const blogStore = useBlogStore();
+
+const truncateDescription = (description) => {
+  // Remove excess whitespace
+  const cleanedDescription = description.replace(/\s+/g, " ").trim();
+  // Split the cleaned description into words
+  const words = cleanedDescription.split(" ");
+  // Check if the number of words exceeds 80
+  return words.length > 5
+    ? words.slice(0, 5).join(" ") + "..."
+    : cleanedDescription;
+};
+
+const markedDescription = (description) => {
+  return marked(description);
+};
+
+const limitedBlogs = computed(() => {
+  return blogStore.blogs.slice(0, blogCount);
+});
+
+onMounted(async () => {
+  await blogStore.fetchBlogs();
+});
 </script>
 
-<style scoped></style>
+<style scoped>
+.blog-card {
+  height: 350px; /* Set a fixed height for the card */
+}
+
+.card-image {
+  height: 150px; /* Set a fixed height for the image container */
+  overflow: hidden; /* Hide excess image parts */
+}
+
+.card-image img {
+  width: 100%; /* Make the image responsive */
+  height: 100%; /* Make the image responsive */
+  object-fit: cover; /* Keep the image aspect ratio */
+}
+
+.blog-content {
+  padding: 20px;
+}
+
+.title {
+  font-size: 18px; /* Set a fixed font size for the title */
+  height: 50px; /* Set a fixed height for the title */
+  overflow: hidden; /* Hide excess title parts */
+}
+
+.desc {
+  height: 100px; /* Set a fixed height for the description */
+  overflow: hidden; /* Hide excess description parts */
+}
+
+.blog-content {
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 200px;
+}
+
+.desc {
+  height: 100px;
+  overflow: hidden;
+}
+
+.butn {
+  margin-top: auto;
+  background-color: var(--color-232f3e);
+  color: white;
+  font-size: 12px;
+  padding: 6px 8px;
+  border-radius: 10px;
+  cursor: pointer;
+  justify-content: center;
+  align-items: center;
+}
+.butn:hover {
+  background-color: var(--color-febd69);
+  color: #131921;
+}
+</style>

@@ -4,7 +4,7 @@
       <div class="row">
         <div class="col-12">
           <p class="text-center mb-0">
-            <router-link to="/" class="text-dark">Home &nbsp; </router-link> /
+            <span @click="route" class="text-dark">Home &nbsp; </span> /
             {{ title }}
           </p>
         </div>
@@ -14,9 +14,33 @@
 </template>
 
 <script setup>
+import { computed } from "vue";
+import router from "@/router";
+import { storeToRefs } from "pinia";
+import { useUserStore } from "@/store/useUserStore";
+
+const userStore = useUserStore();
+
+userStore.loadUserFromStorage();
+
+const { user } = storeToRefs(userStore);
+const isLoggedIn = computed(() => !!user.value);
+
+const route = async () => {
+  if (isLoggedIn.value) {
+    router.push("/");
+  } else {
+    router.push("/account/login");
+  }
+};
+
 defineProps({
   title: String,
 });
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.breadcrumb {
+  cursor: pointer;
+}
+</style>

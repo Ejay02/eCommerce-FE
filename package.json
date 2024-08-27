@@ -10,17 +10,22 @@
     "lint": "eslint . --ext .vue,.js,.jsx,.cjs,.mjs --fix --ignore-path .gitignore"
   },
   "dependencies": {
+    "@formkit/vue": "^1.6.5",
     "@popperjs/core": "^2.11.8",
     "@unhead/vue": "^1.9.14",
+    "axios": "^1.7.5",
     "bootstrap": "^5.3.3",
+    "marked": "^14.1.0",
     "pinia": "^2.1.7",
+    "reading-time-estimator": "^1.11.0",
     "swiper": "^11.1.4",
     "unhead": "^1.9.14",
     "vue": "^3.4.29",
     "vue-image-zoomer": "^2.4.0",
     "vue-router": "4",
     "vue-star-rating": "^2.1.0",
-    "vue3-marquee-slider": "^1.0.5"
+    "vue3-marquee-slider": "^1.0.5",
+    "yup": "^1.4.0"
   },
   "devDependencies": {
     "@vitejs/plugin-vue": "^5.0.5",

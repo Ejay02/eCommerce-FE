@@ -23,7 +23,7 @@
         </div>
         <div class="col-9">
           <div class="row">
-            <blogCard :isBigCard="true" :blogs="blogs" />
+            <blogCard :isBigCard="true" />
           </div>
         </div>
       </div>

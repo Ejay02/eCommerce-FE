@@ -41,8 +41,8 @@
                 </p>
               </div>
               <div class="">
-                <router-link to="/account/forgot-password"
-                  >Forgot your password?</router-link
+                <router-link to="/account/forgot-password" class="fp"
+                  >Forgot password?</router-link
                 >
                 <div
                   class="mt-3 d-flex justify-content-center gap-15 align-items-center"
@@ -70,11 +70,11 @@
 
 <script setup>
 import axios from "axios";
-import Metadata from "@/components/metadata.vue";
-import Breadcrumb from "@/components/breadcrumb.vue";
-import { useUserStore } from "@/store/useUserStore";
 import router from "@/router";
 import { ref, computed } from "vue";
+import Metadata from "@/components/metadata.vue";
+import { useUserStore } from "@/store/useUserStore";
+import Breadcrumb from "@/components/breadcrumb.vue";
 import { useNotifications } from "@/composable/useGlobalAlert";
 
 const { notify } = useNotifications();
@@ -102,8 +102,6 @@ const isFormValid = computed(() => {
     email.value && password.value && !emailError.value && !passwordError.value
   );
 });
-
-
 
 const handleLogin = async () => {
   try {
@@ -133,4 +131,9 @@ const handleLogin = async () => {
 };
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.fp {
+  text-decoration: underline;
+  color: blue;
+}
+</style>

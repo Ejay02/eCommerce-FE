@@ -14,7 +14,11 @@
             <h6 class="text-center mb-3 mt-2">
               No worries, We will send you an email to reset your password
             </h6>
-            <form action="" class="d-flex flex-column gap-15">
+            <form
+              action=""
+              class="d-flex flex-column gap-15"
+              @submit.prevent="handleReset"
+            >
               <div>
                 <input
                   type="email"
@@ -22,13 +26,20 @@
                   name="email"
                   placeholder="Email"
                   autofocus
+                  v-model="email"
                 />
               </div>
 
               <div
                 class="mt-3 d-flex flex-column justify-content-center gap-15 align-items-center"
               >
-                <button class="button border-0" type="submit">Submit</button>
+                <button
+                  class="button border-0"
+                  type="submit"
+                  @click="handleReset"
+                >
+                  Submit
+                </button>
                 <router-link to="/account/login">Cancel</router-link>
               </div>
             </form>
@@ -40,8 +51,36 @@
 </template>
 
 <script setup>
+import axios from "axios";
+import { ref } from "vue";
+import router from "@/router";
 import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
+import { useNotifications } from "@/composable/useGlobalAlert";
+
+const { notify } = useNotifications();
+
+const email = ref("");
+
+const handleReset = async () => {
+  try {
+    const response = await axios.post(
+      `${import.meta.env.VITE_BASE_URL}/user/forgot-password`,
+      {
+        email: email.value,
+      }
+    );
+
+    if (response.data) {
+      notify("Check email for password reset link", "success");
+      router.push("/account/login");
+    }
+    console.log('response:', response.value)
+  } catch (error) {
+    console.log("error:", error);
+    notify("Error creating admin user", "error");
+  }
+};
 </script>
 
 <style scoped></style>

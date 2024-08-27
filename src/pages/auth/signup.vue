@@ -38,6 +38,16 @@
             </div>
             <div>
               <input
+                type="number"
+                class="form-control"
+                name="mobile"
+                placeholder="Mobile"
+                autofocus
+                v-model="mobile"
+              />
+            </div>
+            <div>
+              <input
                 type="email"
                 class="form-control"
                 name="email"
@@ -65,7 +75,6 @@
             <div
               class="mt-3 d-flex flex-column justify-content-center gap-15 align-items-center"
             >
-              {{ isFormValid }}
               <button
                 @click="handleSubmit"
                 class="button border-0"
@@ -73,7 +82,6 @@
                 :disabled="!isFormValid"
                 :class="{ 'opacity-50 pointer-events-none': !isFormValid }"
               >
-                <!-- ? 'opacity-50 pointer-events-none' -->
                 Create
               </button>
             </div>
@@ -89,10 +97,12 @@ import axios from "axios";
 import router from "@/router";
 import { computed, onMounted, ref } from "vue";
 import Metadata from "@/components/metadata.vue";
+import { useUserStore } from "@/store/useUserStore";
 import Breadcrumb from "@/components/breadcrumb.vue";
 import { useNotifications } from "@/composable/useGlobalAlert";
 
 const { notify } = useNotifications();
+const userStore = useUserStore();
 
 const firstname = ref("");
 const lastname = ref("");
@@ -141,6 +151,8 @@ const handleAdmin = async () => {
     );
 
     if (response.data) {
+      userStore.setUser(response.data);
+
       // Set the Authorization header for all future requests
       axios.defaults.headers.common[
         "Authorization"
@@ -150,7 +162,7 @@ const handleAdmin = async () => {
       router.push("/");
     }
   } catch (error) {
-    notify("Invalid Credentials", "error");
+    notify("Error creating admin user", "error");
   }
 };
 
@@ -169,6 +181,8 @@ const handleUser = async () => {
     );
 
     if (response.data) {
+      userStore.setUser(response.data);
+
       // Set the Authorization header for all future requests
       axios.defaults.headers.common[
         "Authorization"
@@ -178,7 +192,7 @@ const handleUser = async () => {
       router.push("/");
     }
   } catch (error) {
-    notify("Invalid Credentials", "error");
+    notify("Error setting up user", "error");
   }
 };
 

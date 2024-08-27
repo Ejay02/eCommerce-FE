@@ -110,6 +110,12 @@ const handleLogin = async () => {
       {
         email: email.value,
         password: password.value,
+      },
+      {
+        withCredentials: true, // This is important for CORS with credentials
+        headers: {
+          "Content-Type": "application/json",
+        },
       }
     );
 

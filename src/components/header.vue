@@ -2,14 +2,48 @@
   <header class="header-top-strip py-3">
     <div class="container-xxl">
       <div class="row">
-        <div class="col-6">
+        <div class="col-6 form-control-sm">
           <p class="text-white mb-0">Free Shipping Over $ 100 & Free Returns</p>
         </div>
-        <div class="col-6">
-          <p class="text-end text-white mb-0">
-            Hotline:
-            <a class="text-white" href="(555) 1234 567890">+00 123 456 7890</a>
-          </p>
+        <div class="col-6 form-control-sm">
+          <div class="d-flex justify-content-end">
+            <!-- line -->
+            <p class="text-white mb-0 me-2">
+              Hotline:
+              <a class="text-white" href="(555) 1234 567890"
+                >+00 123 456 7890</a
+              >
+            </p>
+            <p class="text-white mb-0">|</p>
+            <!-- sell -->
+            <router-link
+              to="/account/signup?role=admin"
+              class="text-white mb-0 me-2 ms-2"
+              >Sell On BuyZone</router-link
+            >
+            <p class="text-white mb-0">|</p>
+
+            <div class="div">
+              <div
+                v-if="isLoggedIn"
+                @click="handleLogout"
+                class="d-flex align-items-center gap-10 text-white ms-2 mb-0 logout"
+              >
+                <span>
+                  Hello {{ user?.firstname }},
+                  <i
+                    class="fa-solid fa-arrow-right-from-bracket cursor-pointer"
+                  ></i>
+                </span>
+              </div>
+              <div v-else @click="handleLogin">
+                <span
+                  class="d-flex align-items-center gap-10 text-white ms-2 mb-0 logout"
+                  >Login <br
+                /></span>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
     </div>
@@ -36,10 +70,33 @@
             ></span>
           </div>
         </div>
-        <div class="col-5">
+        <div class="col-5 form-control-sm">
           <div
             class="header-upper-links d-flex align-items-center justify-content-between"
           >
+            <!--  -->
+            <div>
+              <div class="d-flex align-items-center gap-10 text-white">
+                <p class="mb-0">
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-10 text-white">
+                <p class="mb-0">
+                  <br />
+                </p>
+              </div>
+            </div>
+            <div>
+              <div class="d-flex align-items-center gap-10 text-white">
+                <p class="mb-0">
+                  <br />
+                </p>
+              </div>
+            </div>
+            <!--  -->
             <div>
               <router-link
                 to="/compare"
@@ -62,17 +119,7 @@
                 </p>
               </router-link>
             </div>
-            <div>
-              <router-link
-                to="/account/login"
-                class="d-flex align-items-center gap-10 text-white"
-                ><img src="/images/user.svg" alt="user" />
-                <p class="mb-0">
-                  Login <br />
-                  My Account
-                </p>
-              </router-link>
-            </div>
+
             <div>
               <router-link
                 to="/cart"
@@ -144,9 +191,42 @@
 </template>
 
 <script setup>
+import { useNotifications } from "@/composable/useGlobalAlert";
+import router from "@/router";
 import { useCartStore } from "@/store/cartStore";
+import { useUserStore } from "@/store/useUserStore";
+import { storeToRefs } from "pinia";
+import { computed } from "vue";
 
 const cartStore = useCartStore();
+
+const { notify } = useNotifications();
+
+const userStore = useUserStore();
+
+userStore.loadUserFromStorage();
+
+const { user } = storeToRefs(userStore);
+
+const isLoggedIn = computed(() => !!user.value);
+
+const handleLogout = async () => {
+  try {
+    userStore.clearUser();
+
+    router.push("/account/login");
+    notify("Logout successful!", "success");
+  } catch (error) {
+    notify("Logout failed. Please try again.", "error");
+  }
+};
+const handleLogin = async () => {
+  router.push("/account/login");
+};
 </script>
 
-<style lang="scss" scoped></style>
+<style scoped>
+.logout {
+  cursor: pointer;
+}
+</style>

@@ -25,6 +25,22 @@ import TermsOfService from "./pages/policies/termsOfService.vue";
 
 const routes = [
   {
+    path: "/account/login",
+    component: Login,
+  },
+  {
+    path: "/account/signup",
+    component: SignUp,
+  },
+  {
+    path: "/account/forgot-password",
+    component: ForgotPassword,
+  },
+  {
+    path: "/account/reset-password",
+    component: ResetPassword,
+  },
+  {
     path: "/",
     component: Layout,
     children: [
@@ -64,22 +80,6 @@ const routes = [
       {
         path: "wishlist",
         component: Wishlist,
-      },
-      {
-        path: "account/login",
-        component: Login,
-      },
-      {
-        path: "account/signup",
-        component: SignUp,
-      },
-      {
-        path: "account/forgot-password",
-        component: ForgotPassword,
-      },
-      {
-        path: "account/reset-password",
-        component: ResetPassword,
       },
       {
         path: "cart",

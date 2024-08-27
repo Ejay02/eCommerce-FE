@@ -216,7 +216,8 @@
         <div class="col-12">
           <h3 class="section-heading">Our Latest Blogs</h3>
         </div>
-        <blogCard />
+        <!-- <blogCard /> -->
+        <blogCard :blogCount="4" />
       </div>
     </div>
   </section>

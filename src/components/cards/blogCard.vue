@@ -1,5 +1,6 @@
 <template>
-  <div class="row">
+  <LoadingScreen v-if="blogStore?.loading" />
+  <div class="row" v-if="limitedBlogs?.length">
     <div
       v-for="blog in limitedBlogs"
       :key="blog._id"
@@ -33,6 +34,7 @@ import { useBlogStore } from "@/store/useBlogStore";
 import { computed, onMounted } from "vue";
 import { marked } from "marked";
 import { defineProps } from "vue";
+import LoadingScreen from "../loadingScreen.vue";
 
 const { isBigCard, blogCount } = defineProps({
   isBigCard: {

@@ -5,7 +5,10 @@
     :canonicalSuffix="`blog/${blog._id}`"
   />
   <Breadcrumb :title="blog.title" />
-  <div class="blog-wrapper home-wrapper-2 py-5">
+
+  <LoadingScreen v-if="loading" />
+
+  <div class="blog-wrapper home-wrapper-2 py-5" v-if="!loading">
     <div class="container-xxl">
       <div class="row">
         <div class="col-3">
@@ -89,6 +92,7 @@ import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
 import { readingTime } from "reading-time-estimator";
 import { useNotifications } from "@/composable/useGlobalAlert";
+import LoadingScreen from "@/components/loadingScreen.vue";
 
 const { notify } = useNotifications();
 
@@ -97,8 +101,10 @@ const blogId = computed(() => route.params.id);
 const blog = ref({});
 const markdownDesc = ref("");
 const readingTimeEstimate = ref({});
+const loading = ref(false);
 
 const fetchBlog = async () => {
+  loading.value = true;
   try {
     const res = await axios.get(
       `${import.meta.env.VITE_BASE_URL}/blog/${blogId.value}`
@@ -109,6 +115,8 @@ const fetchBlog = async () => {
     readingTimeEstimate.value = readingTime(blog.value.description);
   } catch (error) {
     notify("Error fetching blog", "error");
+  } finally {
+    loading.value = false;
   }
 };
 

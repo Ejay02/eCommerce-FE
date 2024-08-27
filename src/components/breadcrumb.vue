@@ -19,14 +19,12 @@ import router from "@/router";
 import { storeToRefs } from "pinia";
 import { useUserStore } from "@/store/useUserStore";
 
-
 const userStore = useUserStore();
 
 userStore.loadUserFromStorage();
 
 const { user } = storeToRefs(userStore);
 const isLoggedIn = computed(() => !!user.value);
-console.log("isLoggedIn:", isLoggedIn.value);
 
 const route = async () => {
   if (isLoggedIn.value) {

@@ -129,7 +129,6 @@ const isFormValid = computed(() => {
 const handleAdmin = async () => {
   if (!isFormValid.value) return notify("Please fill all details", "warning");
   try {
-    console.log("hello");
     const response = await axios.post(
       `${import.meta.env.VITE_BASE_URL}/user/register-admin`,
       {

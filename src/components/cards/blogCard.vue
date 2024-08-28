@@ -55,7 +55,7 @@ const truncateDescription = (description) => {
   // Split the cleaned description into words
   const words = cleanedDescription.split(" ");
   // Check if the number of words exceeds 80
-  return words.length > 5
+  return words.length > 20
     ? words.slice(0, 5).join(" ") + "..."
     : cleanedDescription;
 };

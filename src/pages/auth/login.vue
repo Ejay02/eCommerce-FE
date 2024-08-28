@@ -27,15 +27,31 @@
                 />
                 <p v-if="emailError" class="text-danger">{{ emailError }}</p>
               </div>
+              <!-- pssword -->
+              <!-- new -->
               <div class="mt-1">
-                <input
-                  type="password"
-                  class="form-control"
-                  name="password"
-                  placeholder="Password"
-                  @blur="validatePassword"
-                  v-model="password"
-                />
+                <div class="password-field">
+                  <input
+                    :type="passwordFieldType"
+                    class="form-control"
+                    name="password"
+                    placeholder="Password"
+                    @blur="validatePassword"
+                    v-model="password"
+                  />
+                  <span
+                    class="toggle-password"
+                    @click="togglePasswordVisibility('password')"
+                  >
+                    <i
+                      :class="
+                        passwordVisible === 'visible'
+                          ? 'fa-solid fa-eye-slash'
+                          : 'fa-solid fa-eye'
+                      "
+                    ></i>
+                  </span>
+                </div>
                 <p v-if="passwordError" class="text-danger">
                   {{ passwordError }}
                 </p>
@@ -135,11 +151,39 @@ const handleLogin = async () => {
     notify("Invalid Credentials", "error");
   }
 };
+
+const passwordVisible = ref(false);
+
+const passwordFieldType = computed(() =>
+  passwordVisible.value ? "text" : "password"
+);
+
+const togglePasswordVisibility = (field) => {
+  if (field === "password") {
+    passwordVisible.value = !passwordVisible.value;
+  }
+};
 </script>
 
 <style scoped>
 .fp {
   text-decoration: underline;
   color: blue;
+}
+
+.password-field {
+  position: relative;
+}
+
+.toggle-password {
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  cursor: pointer;
+}
+
+.text-danger{
+  font-size: 12px;
 }
 </style>

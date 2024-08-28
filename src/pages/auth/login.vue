@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Login"
     description="Login to the zone"
-    canonicalSuffix="/account/login"
+    canonicalSuffix="/"
   />
   <Breadcrumb title="Login" />
   <div class="login-wrapper home-wrapper-2 py-5">

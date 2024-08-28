@@ -30,7 +30,7 @@ const route = async () => {
   if (isLoggedIn.value) {
     router.push("/layout");
   } else {
-    router.push("/account/login");
+    router.push("/");
   }
 };
 

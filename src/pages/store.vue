@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Store"
     description="Discover top products at BuyZone. Shop tech gadgets, fashion, and more at great prices."
-    canonicalSuffix="/store"
+    canonicalSuffix="layout/store"
   />
   <Breadcrumb title="Store" />
   <div class="store-wrapper py-5 home-wrapper-2">

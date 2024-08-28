@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Cart"
     description="View and manage the items in your shopping cart."
-    canonicalSuffix="/cart"
+    canonicalSuffix="layout/cart"
   />
 
   <Breadcrumb title="Your Cart" />

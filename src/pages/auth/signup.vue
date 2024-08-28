@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Signup"
     description="Signup to the zone"
-    canonicalSuffix="/account/signup"
+    canonicalSuffix="account/signup"
   />
   <Breadcrumb title="Sign Up" />
   <div class="signup-wrapper home-wrapper-2 py-5">

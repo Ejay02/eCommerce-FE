@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Refund Policy"
     description="Learn about BuyZone's refund policy, including eligibility, process, and timeframes for returns and refunds."
-    canonicalSuffix="/refund-policy"
+    canonicalSuffix="layout/refund-policy"
   />
   <Breadcrumb title="Refund" />
   <section class="policy-wrapper py-5 home-wrapper-2">

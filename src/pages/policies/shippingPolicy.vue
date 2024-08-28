@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Shipping Policy"
     description="Discover BuyZone's shipping policy, including delivery options, shipping times, and handling procedures."
-    canonicalSuffix="/shipping-policy"
+    canonicalSuffix="layout/shipping-policy"
   />
   <Breadcrumb title="Shipping" />
   <section class="policy-wrapper py-5 home-wrapper-2">

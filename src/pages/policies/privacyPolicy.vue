@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Privacy Policy"
     description="Read BuyZone's privacy policy to understand how we collect, use, and protect your personal information."
-    canonicalSuffix="/privacy-policy"
+    canonicalSuffix="layout/privacy-policy"
   />
   <Breadcrumb title="Privacy Policy" />
   <section class="policy-wrapper py-5 home-wrapper-2">

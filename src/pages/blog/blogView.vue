@@ -2,7 +2,7 @@
   <Metadata
     :title="`BuyZone | blog | ${blog?.title}`"
     :description="blog?.description"
-    :canonicalSuffix="`blog/${blog._id}`"
+    :canonicalSuffix="`layout/blog/${blogId}`"
   />
   <Breadcrumb :title="blog.title" />
 

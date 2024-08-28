@@ -20,7 +20,8 @@ const props = defineProps({
   },
 });
 
-const baseUrl = import.meta.env.VUE_APP_BASE_URL;
+const baseUrl = import.meta.env.VITE_FE_URL;
+
 const canonicalUrl = `${baseUrl}/${props.canonicalSuffix}`;
 
 useHead({

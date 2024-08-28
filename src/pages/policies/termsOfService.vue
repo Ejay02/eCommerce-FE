@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Terms of Service"
     description="Review BuyZone's terms of service to understand the rules and regulations for using our website and services."
-    canonicalSuffix="/terms-of-service"
+    canonicalSuffix="layout/terms-of-service"
   />
   <Breadcrumb title="Terms Of Service" />
 

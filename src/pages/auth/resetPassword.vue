@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Reset-password"
     description="Update your account security by setting a new password."
-    canonicalSuffix="/account/reset-password"
+    canonicalSuffix="account/reset-password"
   />
   <Breadcrumb title="Forgot Password" />
   <div class="reset-wrapper home-wrapper-2 py-5">

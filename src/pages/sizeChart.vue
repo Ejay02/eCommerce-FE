@@ -3,7 +3,7 @@
     <Metadata
       title="BuyZone | Size Chart"
       description="Size chart for our products."
-      canonicalSuffix="/size-chart"
+      canonicalSuffix="layout/size-chart"
     />
     <Breadcrumb title="Size Chart" />
 

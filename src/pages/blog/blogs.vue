@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Blogs"
     description="Stay updated with BuyZone's latest articles, tips, and reviews."
-    canonicalSuffix="/blogs"
+    canonicalSuffix="layout/blogs"
   />
   <Breadcrumb title="Blogs" />
   <div class="blog-wrapper home-wrapper-2 py-5">

@@ -62,7 +62,7 @@
             <span class="me-4 fontz"
               ><i class="fa-regular fa-eye"></i>{{ blog?.numViews }}</span
             >
-            <span class="fontz"
+            <span class="fontz" @click="toggleLike"
               ><i class="fa-regular fa-thumbs-up"></i>
               {{ blog?.likes?.length ?? 0 }}</span
             >
@@ -120,6 +120,51 @@ const fetchBlog = async () => {
   }
 };
 
+const likeBlog = async () => {
+  try {
+    const res = await axios.put(`${import.meta.env.VITE_BASE_URL}/blog/likes`, {
+      blogId: blogId.value,
+    });
+
+    if (res.data) {
+      notify("liked!", "success");
+    }
+    fetchBlog();
+  } catch (error) {
+    notify("Error completing action", "error");
+  }
+};
+
+const unlikeBlog = async () => {
+  try {
+    const res = await axios.put(
+      `${import.meta.env.VITE_BASE_URL}/blog/dislikes`,
+      {
+        blogId: blogId.value,
+      }
+    );
+
+    if (res.data) {
+      notify("disliked!", "success");
+    }
+    fetchBlog();
+  } catch (error) {
+    notify("Error completing action", "error");
+  }
+};
+
+const isLiked = ref(false);
+
+const toggleLike = async () => {
+  if (isLiked.value) {
+    await unlikeBlog();
+    isLiked.value = false;
+  } else {
+    await likeBlog();
+    isLiked.value = true;
+  }
+};
+
 onMounted(() => {
   fetchBlog();
 });
@@ -146,6 +191,7 @@ onMounted(() => {
 .fontz {
   font-size: 14px;
   color: dimgrey;
+  cursor: pointer;
 }
 
 .divider {

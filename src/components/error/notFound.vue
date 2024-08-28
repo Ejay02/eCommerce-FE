@@ -14,7 +14,7 @@
 
                 <p>The page you are looking for is not available!</p>
 
-                <a href="/" class="link_404">Home</a>
+                <a href="/layout" class="link_404">Home</a>
               </div>
             </div>
           </div>

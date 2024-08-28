@@ -18,7 +18,7 @@
               information and your right to privacy. If you have any questions
               or concerns about our policy, or our practices with regards to
               your personal information, please feel free to
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
 
             <h2>2. Information We Collect</h2>
@@ -56,7 +56,7 @@
               you, to request correction of your information, and to request
               deletion of your information. To exercise these rights, please
               feel free to
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
 
             <h2>7. Updates to This Policy</h2>
@@ -69,7 +69,7 @@
             <h2>8. Contact Us</h2>
             <p>
               If you have questions or comments about this policy, feel free to
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
           </div>
           <Disclaimer />

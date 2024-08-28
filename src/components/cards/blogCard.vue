@@ -20,7 +20,7 @@
             v-html="truncateDescription(markedDescription(blog?.description))"
           ></div>
 
-          <router-link :to="`/blog/${blog._id}`" class="butn text-center"
+          <router-link :to="`/layout/blog/${blog._id}`" class="butn text-center"
             >Read More</router-link
           >
         </div>

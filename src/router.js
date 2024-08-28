@@ -25,7 +25,7 @@ import TermsOfService from "./pages/policies/termsOfService.vue";
 
 const routes = [
   {
-    path: "/account/login",
+    path: "/",
     component: Login,
   },
   {
@@ -41,8 +41,9 @@ const routes = [
     component: ResetPassword,
   },
   {
-    path: "/",
+    path: "/layout",
     component: Layout,
+    meta: { requiresAuth: true },
     children: [
       {
         path: "",
@@ -72,7 +73,7 @@ const routes = [
         path: "blogs",
         component: Blogs,
       },
-      { path: "blog/:id", component: BlogView },
+      { path: "/layout/blog/:id", component: BlogView },
       {
         path: "compare",
         component: Compare,
@@ -102,7 +103,7 @@ const routes = [
         component: TermsOfService,
       },
       {
-        path: "product/:id",
+        path: "/layout/product/:id",
         component: Product,
       },
     ],
@@ -123,5 +124,20 @@ const router = createRouter({
     return { top: 0 };
   },
 });
+
+// Navigation guard to check for authentication
+// eslint-disable-next-line no-unused-vars
+router.beforeEach(async (to, from) => {
+  // Check if the route requires authentication
+  if (to.meta.requiresAuth && !isLoggedIn()) {
+    // If not logged in, redirect to login page
+    return { path: "/" };
+  }
+});
+
+// check if user is logged in
+function isLoggedIn() {
+  return localStorage.getItem("token") !== null;
+}
 
 export default router;

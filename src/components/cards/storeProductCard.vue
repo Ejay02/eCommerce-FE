@@ -15,7 +15,7 @@
       :key="index"
     >
       <div class="store-product-card h-100 position-relative">
-        <router-link :to="`/product/${product.id}`">
+        <router-link :to="`/layout/product/${product.id}`">
           <div class="wishlist-icon position-absolute">
             <img src="/images/wish.svg" alt="wishlist" />
           </div>

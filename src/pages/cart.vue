@@ -17,7 +17,7 @@
           <div class="d-flex align-items-center flex-column empty mt-5">
             <h2 class="text-capitalize">Your cart is empty</h2>
             <p>Add some items to your cart to get started!</p>
-            <router-link to="/store" class="text-dark text-decoration-underline"
+            <router-link to="/layout/store" class="text-dark text-decoration-underline"
               >Continue Shopping</router-link
             >
           </div>
@@ -79,7 +79,7 @@
           </div>
         </div>
         <div class="col-12 py-2 mt-4">
-          <router-link to="/store" class="button"
+          <router-link to="/layout/store" class="button"
             >Continue Shopping</router-link
           >
         </div>
@@ -93,7 +93,7 @@
           <div class="d-flex align-items-end flex-column">
             <p>Subtotal: ${{ cartStore.cartTotal }}</p>
             <p>Taxes and shipping calculated at checkout</p>
-            <router-link to="/checkout" class="button">Check Out</router-link>
+            <router-link to="/layout/checkout" class="button">Check Out</router-link>
           </div>
         </div>
       </div>

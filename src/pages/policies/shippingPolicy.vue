@@ -40,7 +40,7 @@
             <h2>Contact Us</h2>
             <p>
               If you have any questions about our shipping policy, please
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
           </div>
 

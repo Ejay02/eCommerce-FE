@@ -128,8 +128,8 @@ const handleLogin = async () => {
         "Authorization"
       ] = `Bearer ${response.data.token}`;
 
-      notify("Login successful!", "success");
-      router.push("/");
+      notify("Welcome 👋🏽", "success");
+      router.push("/layout");
     }
   } catch (error) {
     notify("Invalid Credentials", "error");

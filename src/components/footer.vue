@@ -75,19 +75,19 @@
         <div class="col-2">
           <h4 class="text-white mb-4">Information</h4>
           <div class="footer-link d-flex flex-column">
-            <router-link to="/privacy-policy" class="text-white py-2 mb-1"
+            <router-link to="/layout/privacy-policy" class="text-white py-2 mb-1"
               >Privacy Policy</router-link
             >
-            <router-link to="/refund-policy" class="text-white py-2 mb-1"
+            <router-link to="/layout/refund-policy" class="text-white py-2 mb-1"
               >Refund Policy</router-link
             >
-            <router-link to="/shipping-policy" class="text-white py-2 mb-1"
+            <router-link to="/layout/shipping-policy" class="text-white py-2 mb-1"
               >Shipping Policy</router-link
             >
-            <router-link to="/terms-of-service" class="text-white py-2 mb-1"
+            <router-link to="/layout/terms-of-service" class="text-white py-2 mb-1"
               >Terms Of Service</router-link
             >
-            <router-link to="/blogs" class="text-white py-2 mb-1"
+            <router-link to="/layout/blogs" class="text-white py-2 mb-1"
               >Blogs</router-link
             >
           </div>
@@ -96,14 +96,14 @@
           <h4 class="text-white mb-4">Account</h4>
           <div class="footer-link d-flex flex-column">
             <router-link to="" class="text-white py-2 mb-1">Search</router-link>
-            <router-link to="/about" class="text-white py-2 mb-1"
+            <router-link to="/layout/about" class="text-white py-2 mb-1"
               >About Us</router-link
             >
             <router-link to="faqs" class="text-white py-2 mb-1">FAQs</router-link>
-            <router-link to="/contact" class="text-white py-2 mb-1"
+            <router-link to="/layout/contact" class="text-white py-2 mb-1"
               >Contact</router-link
             >
-            <router-link to="/size-chart" class="text-white py-2 mb-1"
+            <router-link to="/layout/size-chart" class="text-white py-2 mb-1"
               >Size Chart</router-link
             >
           </div>

@@ -159,7 +159,7 @@ const handleAdmin = async () => {
       ] = `Bearer ${response.data.token}`;
 
       notify("Welcome!", "success");
-      router.push("/");
+      router.push("/layout");
     }
   } catch (error) {
     notify("Error creating admin user", "error");
@@ -189,7 +189,7 @@ const handleUser = async () => {
       ] = `Bearer ${response.data.token}`;
 
       notify("Welcome!", "success");
-      router.push("/");
+      router.push("/layout");
     }
   } catch (error) {
     notify("Error setting up user", "error");

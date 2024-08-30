@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Refund Policy"
     description="Learn about BuyZone's refund policy, including eligibility, process, and timeframes for returns and refunds."
-    canonicalSuffix="/refund-policy"
+    canonicalSuffix="layout/refund-policy"
   />
   <Breadcrumb title="Refund" />
   <section class="policy-wrapper py-5 home-wrapper-2">
@@ -39,7 +39,7 @@
             <h2>How to Request a Refund</h2>
             <ol>
               <li>
-                <router-link to="/contact">Contact</router-link> our customer
+                <router-link to="/layout/contact">Contact</router-link> our customer
                 service team at with your order number and reason for the
                 return.
               </li>
@@ -64,7 +64,7 @@
             <h2>Contact Us</h2>
             <p>
               If you have any questions about our refund policy, please
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
           </div>
 

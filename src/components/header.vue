@@ -24,18 +24,50 @@
             <p class="text-white mb-0">|</p>
 
             <div class="div">
-              <div
-                v-if="isLoggedIn"
-                @click="handleLogout"
-                class="d-flex align-items-center gap-10 text-white ms-2 mb-0 logout"
-              >
-                <span>
+              <div class="btn-group" v-if="isLoggedIn">
+                <div
+                  class="d-flex align-items-center gap-10 text-white ms-2 mb-0 logout dropdown-toggle"
+                  type="button"
+                  data-bs-toggle="dropdown"
+                  aria-expanded="false"
+                >
                   Hello {{ user?.firstname }},
-                  <i
-                    class="fa-solid fa-arrow-right-from-bracket cursor-pointer"
-                  ></i>
-                </span>
+                </div>
+                <ul class="dropdown-menu">
+                  <li
+                    class="dropdown-menu-item"
+                    @mouseover="hover = true"
+                    @mouseleave="hover = false"
+                  >
+                    <a
+                      href="https://buyzone-demo.netlify.app/"
+                      target="_blank"
+                      class="d-flex gap-3 align-items-center text-decoration-none text-secondary text-center"
+                      :class="{ hovered: hover }"
+                    >
+                      <i class="fas fa-external-link-alt"></i>
+                      Admin Dashboard
+                    </a>
+                  </li>
+
+                  <li
+                    class="dropdown-menu-item"
+                    @mouseover="hover = true"
+                    @mouseleave="hover = false"
+                  >
+                    <div
+                      data-test="logout"
+                      @click="handleLogout"
+                      class="d-flex gap-3 align-items-center text-decoration-none text-secondary"
+                      :class="{ hovered: hover }"
+                    >
+                      <i class="fa-solid fa-power-off"></i>
+                      <span>Logout</span>
+                    </div>
+                  </li>
+                </ul>
               </div>
+
               <div v-else @click="handleLogin">
                 <span
                   class="d-flex align-items-center gap-10 text-white ms-2 mb-0 logout"
@@ -53,7 +85,9 @@
     <div class="container-xxl">
       <div class="row align-items-center">
         <div class="col-2">
-          <h2><router-link class="text-white" to="/">BuyZone</router-link></h2>
+          <h2>
+            <router-link class="text-white" to="/layout">BuyZone</router-link>
+          </h2>
         </div>
         <div class="col-5">
           <div class="input-group">
@@ -99,7 +133,7 @@
             <!--  -->
             <div>
               <router-link
-                to="/compare"
+                to="/layout/compare"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/compare.svg" alt="compare" />
                 <p class="mb-0">
@@ -110,7 +144,7 @@
             </div>
             <div>
               <router-link
-                to="/wishlist"
+                to="/layout/wishlist"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/wishlist.svg" alt="wishlist" />
                 <p class="mb-0">
@@ -122,7 +156,7 @@
 
             <div>
               <router-link
-                to="/cart"
+                to="/layout/cart"
                 class="d-flex align-items-center gap-10 text-white"
                 ><img src="/images/cart.svg" alt="cart" />
                 <div class="d-flex flex-column gap-10">
@@ -177,10 +211,10 @@
             </div>
             <div class="menu-links">
               <div class="d-flex align-items-center gap-15">
-                <router-link class="" to="/">Home</router-link>
-                <router-link class="" to="/store">Store</router-link>
-                <router-link class="" to="/blogs">Blogs</router-link>
-                <router-link class="" to="/contact">Contact</router-link>
+                <router-link class="" to="/layout">Home</router-link>
+                <router-link class="" to="/layout/store">Store</router-link>
+                <router-link class="" to="/layout/blogs">Blogs</router-link>
+                <router-link class="" to="/layout/contact">Contact</router-link>
               </div>
             </div>
           </div>
@@ -214,19 +248,41 @@ const handleLogout = async () => {
   try {
     userStore.clearUser();
 
-    router.push("/account/login");
-    notify("Logout successful!", "success");
+    router.push("/");
+    notify("You have been logged out of your account.!", "success");
   } catch (error) {
     notify("Logout failed. Please try again.", "error");
   }
 };
 const handleLogin = async () => {
-  router.push("/account/login");
+  router.push("/");
 };
 </script>
 
 <style scoped>
 .logout {
   cursor: pointer;
+}
+
+li {
+  font-size: 12px;
+  padding: 8px;
+  cursor: pointer;
+}
+
+.dropdown-menu-item:hover,
+.dropdown-menu-item.hovered {
+  background-color: #f5f5f5;
+  cursor: pointer;
+}
+
+.dropdown-menu-item:hover a,
+.dropdown-menu-item.hovered a {
+  color: #007bff;
+}
+
+.dropdown-menu-item:hover i,
+.dropdown-menu-item.hovered i {
+  color: #007bff;
 }
 </style>

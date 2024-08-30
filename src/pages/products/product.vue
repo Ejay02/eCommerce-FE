@@ -2,7 +2,7 @@
   <Metadata
     :title="`BuyZone | product | ${product.title}`"
     :description="`${product.description}`"
-    :canonicalSuffix="`product/${product.id}`"
+    :canonicalSuffix="`layout/product/${product.id}`"
   />
   <Breadcrumb :title="product.title" />
 

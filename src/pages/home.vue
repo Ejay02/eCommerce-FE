@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Home"
     description="Stay updated with BuyZone's latest articles, tips, and reviews."
-    canonicalSuffix="/home"
+    canonicalSuffix="layout/home"
   />
 
   <!-- main banner -->

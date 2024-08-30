@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Signup"
     description="Signup to the zone"
-    canonicalSuffix="/account/signup"
+    canonicalSuffix="account/signup"
   />
   <Breadcrumb title="Sign Up" />
   <div class="signup-wrapper home-wrapper-2 py-5">
@@ -159,7 +159,7 @@ const handleAdmin = async () => {
       ] = `Bearer ${response.data.token}`;
 
       notify("Welcome!", "success");
-      router.push("/");
+      router.push("/layout");
     }
   } catch (error) {
     notify("Error creating admin user", "error");
@@ -189,7 +189,7 @@ const handleUser = async () => {
       ] = `Bearer ${response.data.token}`;
 
       notify("Welcome!", "success");
-      router.push("/");
+      router.push("/layout");
     }
   } catch (error) {
     notify("Error setting up user", "error");

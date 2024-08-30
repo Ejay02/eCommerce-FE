@@ -28,9 +28,9 @@ const isLoggedIn = computed(() => !!user.value);
 
 const route = async () => {
   if (isLoggedIn.value) {
-    router.push("/");
+    router.push("/layout");
   } else {
-    router.push("/account/login");
+    router.push("/");
   }
 };
 

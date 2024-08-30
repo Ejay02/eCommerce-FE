@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Wishlist"
     description="Stay updated with BuyZone's latest articles, tips, and reviews."
-    canonicalSuffix="/wishlist"
+    canonicalSuffix="layout/wishlist"
   />
   <Breadcrumb title="Wishlist(s)" />
 

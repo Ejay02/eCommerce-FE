@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Forgot-password"
     description="Forgot password? No worries! Reset it in seconds and get back to it!"
-    canonicalSuffix="/account/forgot-password"
+    canonicalSuffix="account/forgot-password"
   />
   <Breadcrumb title="Forgot Password" />
   <div class="reset-wrapper home-wrapper-2 py-5">
@@ -40,7 +40,7 @@
                 >
                   Submit
                 </button>
-                <router-link to="/account/login">Cancel</router-link>
+                <router-link to="/">Cancel</router-link>
               </div>
             </form>
           </div>
@@ -73,7 +73,7 @@ const handleReset = async () => {
 
     if (response.data) {
       notify("Check email for password reset link", "success");
-      router.push("/account/login");
+      router.push("/");
     }
     console.log('response:', response.value)
   } catch (error) {

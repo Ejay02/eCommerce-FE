@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Compare"
     description="Compare products side-by-side to make informed decisions."
-    canonicalSuffix="/compare"
+    canonicalSuffix="layout/compare"
   />
   <Breadcrumb title="Compare" />
   <div class="compare-product-wrapper py-5 home-wrapper-2">

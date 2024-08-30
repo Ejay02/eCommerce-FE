@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Contact"
     description="Questions, compliments, or just want to chat? Reach out"
-    canonicalSuffix="/contact"
+    canonicalSuffix="layout/contact"
   />
   <Breadcrumb title="Contact" />
 
@@ -28,9 +28,18 @@
           <div class="contact-inner-wrapper d-flex justify-content-between">
             <div class="">
               <h3 class="contact-title mb-4">Contact</h3>
-              <form class="d-flex flex-column gap-15">
+              <form
+                class="d-flex flex-column gap-15"
+                @submit.prevent="handleSubmit"
+              >
                 <div>
-                  <input type="text" class="form-control" placeholder="Name" />
+                  <input
+                    type="text"
+                    class="form-control"
+                    placeholder="Name"
+                    v-model="name"
+                    autofocus
+                  />
                 </div>
                 <div>
                   <input
@@ -38,6 +47,7 @@
                     type="email"
                     class="form-control"
                     placeholder="Email"
+                    v-model="email"
                   />
                 </div>
                 <div>
@@ -46,6 +56,7 @@
                     type="number"
                     class="form-control"
                     placeholder="Mobile number"
+                    v-model="mobile"
                   />
                 </div>
                 <div>
@@ -56,11 +67,14 @@
                     cols="30"
                     rows="4"
                     placeholder="Comments"
+                    v-model="comment"
                   ></textarea>
                 </div>
 
                 <div class="">
-                  <button class="button border-0">Submit</button>
+                  <button class="button border-0" @click="handleSubmit">
+                    Submit
+                  </button>
                 </div>
               </form>
             </div>
@@ -101,14 +115,47 @@
 </template>
 
 <script setup>
+import { ref } from "vue";
+import axios from "axios";
 import Metadata from "@/components/metadata.vue";
 import Breadcrumb from "@/components/breadcrumb.vue";
-import { ref } from "vue";
+import { useNotifications } from "@/composable/useGlobalAlert";
+
+const { notify } = useNotifications();
 
 const iframeLoaded = ref(false);
 
 const onIframeLoad = () => {
   iframeLoaded.value = true;
+};
+
+const name = ref("");
+const email = ref("");
+const mobile = ref("");
+const comment = ref("");
+
+const handleSubmit = async () => {
+  try {
+    const response = await axios.post(
+      `${import.meta.env.VITE_BASE_URL}/enquiry`,
+      {
+        name: name.value,
+        email: email.value,
+        mobile: mobile.value,
+        comment: comment.value,
+      }
+    );
+
+    if (response.data) {
+      notify("Email sent", "success");
+    }
+    name.value = "";
+    email.value = "";
+    mobile.value = "";
+    comment.value = "";
+  } catch (error) {
+    notify("Error sending mail", "error");
+  }
 };
 </script>
 

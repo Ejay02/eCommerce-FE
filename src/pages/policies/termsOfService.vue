@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Terms of Service"
     description="Review BuyZone's terms of service to understand the rules and regulations for using our website and services."
-    canonicalSuffix="/terms-of-service"
+    canonicalSuffix="layout/terms-of-service"
   />
   <Breadcrumb title="Terms Of Service" />
 
@@ -36,7 +36,7 @@
             <h2>3. Privacy Policy</h2>
             <p>
               Your use of BuyZone's services is also governed by our
-              <a href="/privacy-policy">privacy policy</a>. Please review the
+              <a href="/layout/privacy-policy">privacy policy</a>. Please review the
               privacy policy to understand how we collect, use, and protect your
               information.
             </p>

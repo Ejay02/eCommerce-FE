@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | Shipping Policy"
     description="Discover BuyZone's shipping policy, including delivery options, shipping times, and handling procedures."
-    canonicalSuffix="/shipping-policy"
+    canonicalSuffix="layout/shipping-policy"
   />
   <Breadcrumb title="Shipping" />
   <section class="policy-wrapper py-5 home-wrapper-2">
@@ -40,7 +40,7 @@
             <h2>Contact Us</h2>
             <p>
               If you have any questions about our shipping policy, please
-              <router-link to="/contact">contact us</router-link>.
+              <router-link to="/layout/contact">contact us</router-link>.
             </p>
           </div>
 

@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | FAQs"
     description="Find answers to the most commonly asked questions about our products and services."
-    canonicalSuffix="/faq"
+    canonicalSuffix="layout/faq"
   />
   <Breadcrumb title="FAQs" />
 

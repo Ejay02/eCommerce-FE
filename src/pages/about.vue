@@ -2,7 +2,7 @@
   <Metadata
     title="BuyZone | About"
     description="Learn more about BuyZone, our mission, values, and the team dedicated to providing the best shopping experience."
-    canonicalSuffix="/about"
+    canonicalSuffix="layout/about"
   />
   <Breadcrumb title="About" />
 

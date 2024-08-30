@@ -2,7 +2,7 @@
   <Metadata
     :title="`BuyZone | blog | ${blog?.title}`"
     :description="blog?.description"
-    :canonicalSuffix="`blog/${blog._id}`"
+    :canonicalSuffix="`layout/blog/${blogId}`"
   />
   <Breadcrumb :title="blog.title" />
 
@@ -16,21 +16,21 @@
             <h3 class="filter-title">Find By Categories</h3>
             <div class="ps-0">
               <ul class="d-flex flex-column">
-                <router-link to="/" style="color: gray; text-decoration: none"
+                <router-link to="/layout" style="color: gray; text-decoration: none"
                   >Home</router-link
                 >
                 <router-link
-                  to="/store"
+                  to="/layout/store"
                   style="color: gray; text-decoration: none"
                   >Store</router-link
                 >
                 <router-link
-                  to="/blogs"
+                  to="/layout/blogs"
                   style="color: gray; text-decoration: none"
                   >Blogs</router-link
                 >
                 <router-link
-                  to="/contact"
+                  to="/layout/contact"
                   style="color: gray; text-decoration: none"
                   >Contact</router-link
                 >
@@ -40,7 +40,7 @@
         </div>
         <div class="col-9">
           <div class="single-blog-card">
-            <router-link to="/blogs" class="d-flex align-items-center gap-10"
+            <router-link to="/layout/blogs" class="d-flex align-items-center gap-10"
               ><i class="fa-solid fa-arrow-left"></i> Back to blogs</router-link
             >
             <h3 class="title">{{ blog?.title }}</h3>
@@ -62,10 +62,16 @@
             <span class="me-4 fontz"
               ><i class="fa-regular fa-eye"></i>{{ blog?.numViews }}</span
             >
-            <span class="fontz"
-              ><i class="fa-regular fa-thumbs-up"></i>
-              {{ blog?.likes?.length ?? 0 }}</span
-            >
+            <span class="fontz" @click="toggleLike">
+              <i
+                :class="{
+                  'fa-solid fa-thumbs-up ': isLiked,
+                  'fa-regular fa-thumbs-up': !isLiked,
+                }"
+                class="like-button"
+              ></i>
+              {{ blog?.likes?.length ?? 0 }}
+            </span>
             <div class="divider my-4"></div>
 
             <img
@@ -120,6 +126,42 @@ const fetchBlog = async () => {
   }
 };
 
+const likeBlog = async () => {
+  try {
+    await axios.put(`${import.meta.env.VITE_BASE_URL}/blog/likes`, {
+      blogId: blogId.value,
+    });
+
+    fetchBlog();
+  } catch (error) {
+    notify("Error completing action", "error");
+  }
+};
+
+const unlikeBlog = async () => {
+  try {
+    await axios.put(`${import.meta.env.VITE_BASE_URL}/blog/dislikes`, {
+      blogId: blogId.value,
+    });
+
+    fetchBlog();
+  } catch (error) {
+    notify("Error completing action", "error");
+  }
+};
+
+const isLiked = ref(false);
+
+const toggleLike = async () => {
+  if (isLiked.value) {
+    await unlikeBlog();
+    isLiked.value = false;
+  } else {
+    await likeBlog();
+    isLiked.value = true;
+  }
+};
+
 onMounted(() => {
   fetchBlog();
 });
@@ -146,10 +188,41 @@ onMounted(() => {
 .fontz {
   font-size: 14px;
   color: dimgrey;
+  cursor: pointer;
 }
 
 .divider {
   height: 1px;
   background-color: #f0f0f0;
+}
+
+.like-button {
+  transition: transform 0.2s ease-in-out, color 0.2s ease-in-out;
+}
+
+.like-button.fa-solid {
+  color: blue;
+  transform: scale(1.2);
+}
+
+.like-button.fa-regular {
+  color: dimgrey;
+  transform: scale(1);
+}
+
+@keyframes thumb-up-animation {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.2);
+  }
+  100% {
+    transform: scale(1);
+  }
+}
+
+.like-button.fa-solid.fa-thumbs-up {
+  animation: thumb-up-animation 0.5s ease-in-out;
 }
 </style>

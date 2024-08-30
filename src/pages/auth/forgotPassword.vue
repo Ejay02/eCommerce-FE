@@ -75,10 +75,8 @@ const handleReset = async () => {
       notify("Check email for password reset link", "success");
       router.push("/");
     }
-    console.log('response:', response.value)
   } catch (error) {
-    console.log("error:", error);
-    notify("Error creating admin user", "error");
+    notify(error.response.data.message, "error");
   }
 };
 </script>

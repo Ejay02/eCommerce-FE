@@ -39,8 +39,9 @@
                     @mouseover="hover = true"
                     @mouseleave="hover = false"
                   >
+                    
                     <a
-                      href="https://buyzone-demo.netlify.app/"
+                      href="https://buyzone-admin-dashboard.netlify.app/"
                       target="_blank"
                       class="d-flex gap-3 align-items-center text-decoration-none text-secondary text-center"
                       :class="{ hovered: hover }"

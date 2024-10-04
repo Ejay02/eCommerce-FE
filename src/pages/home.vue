@@ -140,7 +140,7 @@
             >
               <div>
                 <h6>{{ data.title }}</h6>
-                <p>{{ data.count }}Items</p>
+                <p>{{ data.count }} Items</p>
               </div>
               <img :src="data.image" :alt="data.alt" class="img-fluid" />
             </div>

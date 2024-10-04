@@ -1,7 +1,6 @@
 <template>
   <div class="loading-screen d-flex justify-content-center align-items-center">
     <div class="spinner-border text-primary" role="status"></div>
-    <!-- <h2 class="loading-text font-monospace">Loading, stand by...</h2> -->
     <h2 class="loading-text font-monospace">{{ message }}</h2>
   </div>
 </template>

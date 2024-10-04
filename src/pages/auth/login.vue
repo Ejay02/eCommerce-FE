@@ -5,7 +5,9 @@
     canonicalSuffix="/"
   />
   <Breadcrumb title="Login" />
-  <div class="login-wrapper home-wrapper-2 py-5">
+
+  <LoadingScreen :msg="'Brewing up something amazing...'" v-if="loading" />
+  <div v-else class="login-wrapper home-wrapper-2 py-5">
     <div class="container-xxl">
       <div class="row">
         <div class="col-12">
@@ -91,6 +93,7 @@ import { ref, computed } from "vue";
 import Metadata from "@/components/metadata.vue";
 import { useUserStore } from "@/store/useUserStore";
 import Breadcrumb from "@/components/breadcrumb.vue";
+import LoadingScreen from "@/components/loadingScreen.vue";
 import { useNotifications } from "@/composable/useGlobalAlert";
 
 const { notify } = useNotifications();
@@ -100,6 +103,7 @@ const password = ref("");
 
 const emailError = ref("");
 const passwordError = ref("");
+const loading = ref(false);
 
 const validateEmail = () => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -120,6 +124,8 @@ const isFormValid = computed(() => {
 });
 
 const handleLogin = async () => {
+  loading.value = true;
+
   try {
     const response = await axios.post(
       `${import.meta.env.VITE_BASE_URL}/user/login`,
@@ -149,6 +155,8 @@ const handleLogin = async () => {
     }
   } catch (error) {
     notify("Invalid Credentials", "error");
+  } finally {
+    loading.value = false;
   }
 };
 
@@ -183,7 +191,7 @@ const togglePasswordVisibility = (field) => {
   cursor: pointer;
 }
 
-.text-danger{
+.text-danger {
   font-size: 12px;
 }
 </style>

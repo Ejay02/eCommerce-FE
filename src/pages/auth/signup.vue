@@ -5,7 +5,8 @@
     canonicalSuffix="account/signup"
   />
   <Breadcrumb title="Sign Up" />
-  <div class="signup-wrapper home-wrapper-2 py-5">
+  <LoadingScreen :msg="'Brewing up something amazing...'" v-if="loading" />
+  <div v-else class="signup-wrapper home-wrapper-2 py-5">
     <div class="row">
       <div class="col-12">
         <div class="auth-card">
@@ -99,6 +100,7 @@ import { computed, onMounted, ref } from "vue";
 import Metadata from "@/components/metadata.vue";
 import { useUserStore } from "@/store/useUserStore";
 import Breadcrumb from "@/components/breadcrumb.vue";
+import LoadingScreen from "@/components/loadingScreen.vue";
 import { useNotifications } from "@/composable/useGlobalAlert";
 
 const { notify } = useNotifications();
@@ -111,6 +113,7 @@ const mobile = ref("");
 const password = ref("");
 const emailError = ref("");
 const passwordError = ref("");
+const loading = ref(false);
 
 const validateEmail = () => {
   const emailPattern = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
@@ -137,6 +140,7 @@ const isFormValid = computed(() => {
 
 // admin
 const handleAdmin = async () => {
+  loading.value = true;
   if (!isFormValid.value) return notify("Please fill all details", "warning");
   try {
     const response = await axios.post(
@@ -163,11 +167,14 @@ const handleAdmin = async () => {
     }
   } catch (error) {
     notify("Error creating admin user", "error");
+  } finally {
+    loading.value = false;
   }
 };
 
 //user
 const handleUser = async () => {
+  loading.value = true;
   try {
     const response = await axios.post(
       `${import.meta.env.VITE_BASE_URL}/user/register`,
@@ -193,6 +200,8 @@ const handleUser = async () => {
     }
   } catch (error) {
     notify("Error setting up user", "error");
+  } finally {
+    loading.value = false;
   }
 };
 

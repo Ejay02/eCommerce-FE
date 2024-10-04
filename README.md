@@ -44,6 +44,12 @@ Follow these steps to set up the project locally:
 
 Check out the live demo of the project at [BuyZone](https://buyzone-demo.netlify.app/).
 
+#### login credentials
+```
+testuser@test.com
+12345@678
+```
+
 ### Admin Dashboard
 
 Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify.app/).

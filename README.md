@@ -59,10 +59,6 @@ Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify
 - Product images and descriptions are sourced from [Amazon](https://www.amazon.com/) and [Best Buy](https://www.bestbuy.com/).
 - This project uses the [Vue.js](https://vuejs.org/) framework.
 
-## License
-
-This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.
-
 ## Contribution Guidelines
 
 We welcome contributions to BuyZone! To contribute, please follow these guidelines:
@@ -71,4 +67,6 @@ We welcome contributions to BuyZone! To contribute, please follow these guidelin
 - Could you test your changes thoroughly?
 - Submit a pull request detailing the changes you've made.
 
+## License
 
+This project is licensed under the MIT License. See the [LICENSE](LICENSE) file for more details.

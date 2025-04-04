@@ -57,7 +57,7 @@ Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify
 ## Credits
 
 - Product images and descriptions are sourced from [Amazon](https://www.amazon.com/) and [Best Buy](https://www.bestbuy.com/).
-- This project uses the [Vue.js](https://vuejs.org/) framework.
+
 
 ## Contribution Guidelines
 

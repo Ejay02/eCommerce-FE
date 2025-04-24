@@ -59,7 +59,7 @@ Visit the BuyZone Admin Dashboard [here](https://buyzone-admin-dashboard.netlify
 - Product images and descriptions are sourced from [Amazon](https://www.amazon.com/) and [Best Buy](https://www.bestbuy.com/).
 
 
-## Contribution Guidelines
+## Contribution Guidelines ✨
 
 We welcome contributions to BuyZone! To contribute, please follow these guidelines:
 - Fork the repository and create your branch from `master`.

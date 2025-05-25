@@ -1,6 +1,6 @@
 # BuyZone ~ Frontend
 
-Welcome to the BuyZone front-end project! This project is an online marketplace interface built with Vue.js, featuring a product catalog and other essential e-commerce functionalities.
+Welcome to the BuyZone front-end project! This project is an online marketplace interface built with Vue.js, featuring a product catalog and other essential e-commerce functionalities..
 
 ## Overview
 

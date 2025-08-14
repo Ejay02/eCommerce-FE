@@ -26,24 +26,7 @@ import TermsOfService from "./pages/policies/termsOfService.vue";
 const routes = [
   {
     path: "/",
-    component: Login,
-  },
-  {
-    path: "/account/signup",
-    component: SignUp,
-  },
-  {
-    path: "/account/forgot-password",
-    component: ForgotPassword,
-  },
-  {
-    path: "/account/reset-password",
-    component: ResetPassword,
-  },
-  {
-    path: "/layout",
     component: Layout,
-    meta: { requiresAuth: true },
     children: [
       {
         path: "",
@@ -73,7 +56,7 @@ const routes = [
         path: "blogs",
         component: Blogs,
       },
-      { path: "/layout/blog/:id", component: BlogView },
+      { path: "blog/:id", component: BlogView },
       {
         path: "compare",
         component: Compare,
@@ -103,13 +86,28 @@ const routes = [
         component: TermsOfService,
       },
       {
-        path: "/layout/product/:id",
+        path: "product/:id",
         component: Product,
       },
     ],
   },
   {
-    // path: "*",
+    path: "/account/login",
+    component: Login,
+  },
+  {
+    path: "/account/signup",
+    component: SignUp,
+  },
+  {
+    path: "/account/forgot-password",
+    component: ForgotPassword,
+  },
+  {
+    path: "/account/reset-password",
+    component: ResetPassword,
+  },
+  {
     path: "/:catchAll(.*)",
     name: "NotFound",
     component: NotFound,
@@ -125,19 +123,9 @@ const router = createRouter({
   },
 });
 
-// Navigation guard to check for authentication
-// eslint-disable-next-line no-unused-vars
-router.beforeEach(async (to, from) => {
-  // Check if the route requires authentication
-  if (to.meta.requiresAuth && !isLoggedIn()) {
-    // If not logged in, redirect to login page
-    return { path: "/" };
-  }
-});
+// function isLoggedIn() {
+//   return localStorage.getItem("token") !== null;
+// }
 
-// check if user is logged in
-function isLoggedIn() {
-  return localStorage.getItem("token") !== null;
-}
 
 export default router;

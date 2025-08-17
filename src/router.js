@@ -92,7 +92,7 @@ const routes = [
     ],
   },
    {
-    path: "/layout/blog,:id",
+    path: "/layout/blog/:id",
     redirect: to => {
       return { path: `/blog/${to.params.id}` }
     }

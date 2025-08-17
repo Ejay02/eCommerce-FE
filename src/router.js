@@ -98,6 +98,12 @@ const routes = [
     }
   },
    {
+    path: "/layout/product/:id",
+    redirect: to => {
+      return { path: `/product/${to.params.id}` }
+    }
+  },
+   {
     path: "/layout/:pathMatch(.*)*",
     redirect: to => {
       return { path: `/${to.params.pathMatch}` }

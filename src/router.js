@@ -91,6 +91,12 @@ const routes = [
       },
     ],
   },
+   {
+    path: "/layout/:pathMatch(.*)*",
+    redirect: to => {
+      return { path: `/${to.params.pathMatch}` }
+    }
+  },
   {
     path: "/account/login",
     component: Login,

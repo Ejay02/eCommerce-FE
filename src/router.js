@@ -92,6 +92,12 @@ const routes = [
     ],
   },
    {
+    path: "/layout/blog,:id",
+    redirect: to => {
+      return { path: `/blog/${to.params.id}` }
+    }
+  },
+   {
     path: "/layout/:pathMatch(.*)*",
     redirect: to => {
       return { path: `/${to.params.pathMatch}` }
